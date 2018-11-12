@@ -1,0 +1,10 @@
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.exe.config
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.exe
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.pdb
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.Form1.resources
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.Properties.Resources.resources
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.exe
+C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.pdb
