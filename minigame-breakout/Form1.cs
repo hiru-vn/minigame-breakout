@@ -39,6 +39,19 @@ namespace minigame_breakout
                 {
                     Color rndColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                     x.BackColor = rndColor;
+
+                    //TextBox temp1 = new TextBox();
+                    //temp1.Location = x.Location;
+                    //temp1.Height = constant.brickHeight - 5;
+                    //temp1.Width = 1;
+                    //temp1.BackColor = rndColor;
+                    //this.Controls.Add(temp1);
+                    //TextBox temp2 = new TextBox();
+                    //temp2.Location = new Point(x.Location.X + this.pictureBox1.Width, x.Location.Y);
+                    //temp2.Height = constant.brickHeight - 5;
+                    //temp2.Width = 1;
+                    //temp2.BackColor = rndColor;
+                    //this.Controls.Add(temp2);
                 }
             }
             this.KeyPreview = true;
@@ -48,16 +61,7 @@ namespace minigame_breakout
             {
                 if (x is PictureBox && x.Tag == "block")
                 {
-                    TextBox temp1 = new TextBox();
-                    temp1.Location = x.Location;
-                    temp1.Height = constant.brickHeight - 5;
-                    temp1.Width = 1;
-                    this.Controls.Add(temp1);
-                    TextBox temp2 = new TextBox();
-                    temp2.Location = new Point(x.Location.X + constant.brickWidth, x.Location.Y);
-                    temp2.Height = constant.brickHeight - 5;
-                    temp2.Width = 1;
-                    this.Controls.Add(temp2);
+                    
                 }
             }
         }
@@ -69,7 +73,7 @@ namespace minigame_breakout
                 goleft = true;
                 goright = false;
             }
-            else if ((e.KeyCode == Keys.Right || e.KeyCode == Keys.F) && (this.button1.Left + constant.playerWidth) < ClientSize.Width)
+            else if ((e.KeyCode == Keys.Right || e.KeyCode == Keys.F) && (this.button1.Left + button1.Width) < ClientSize.Width)
             {
                 goright = true;
                 goleft = false;
@@ -96,7 +100,7 @@ namespace minigame_breakout
             {
                 goleft = false;
             }
-            else if (button1.Left+constant.playerWidth>this.ClientSize.Width)
+            else if (button1.Left+ button1.Width > this.ClientSize.Width)
             {
                 goright = false;
             }
@@ -118,7 +122,7 @@ namespace minigame_breakout
             {
                 if (x is PictureBox && x.Tag == "block")
                 {
-                    if (Ball.Bounds.IntersectsWith(new Rectangle(x.Location, new Size(1, constant.brickHeight-5))) || Ball.Bounds.IntersectsWith(new Rectangle(new Point(x.Location.X+constant.brickWidth,x.Location.Y) , new Size(1,constant.brickHeight-5))))
+                    if (Ball.Bounds.IntersectsWith(new Rectangle(x.Location, new Size(1, constant.brickHeight-5))) || Ball.Bounds.IntersectsWith(new Rectangle(new Point(x.Location.X+ this.pictureBox1.Width, x.Location.Y) , new Size(1,constant.brickHeight-5))))
                     {
                         this.Controls.Remove(x);
                         ballx = -ballx;
