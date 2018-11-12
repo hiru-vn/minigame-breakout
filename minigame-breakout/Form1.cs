@@ -90,12 +90,15 @@ namespace minigame_breakout
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //banh di chuyen
             Ball.Left += ballx;
             Ball.Top += bally;
+            //cap nhat score
             label1.Text = "Score: " + score;
+            //di chuyen player
             if (goleft) { button1.Left -= speed; }
             else if (goright) { button1.Left += speed; }
-
+            //xu ly khi player dung tuong
             if (button1.Left<1)
             {
                 goleft = false;
@@ -104,25 +107,27 @@ namespace minigame_breakout
             {
                 goright = false;
             }
+            //xu ly banh va cham voi tuong
             if (Ball.Left + constant.ballHeight > ClientSize.Width || Ball.Left<1)
             {
                 ballx = -ballx;
             }
-            if (Ball.Top<1 || Ball.Bounds.IntersectsWith(button1.Bounds))
+            if (Ball.Top<1)
             {
                 bally = -bally;
             }
-            if (Ball.Top + constant.ballHeight >= ClientSize.Height)
+            if (Ball.Top >= ClientSize.Height)
             {
                 this.timer1.Enabled = false;
                 this.Controls.Clear();
                 MessageBox.Show("you lose!");
             }
+            //xu ly banh va cham voi block
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Tag == "block")
                 {
-                    if (Ball.Bounds.IntersectsWith(new Rectangle(x.Location, new Size(1, constant.brickHeight-5))) || Ball.Bounds.IntersectsWith(new Rectangle(new Point(x.Location.X+ this.pictureBox1.Width, x.Location.Y) , new Size(1,constant.brickHeight-5))))
+                    if (Ball.Bounds.IntersectsWith(new Rectangle(x.Location, new Size(1, pictureBox1.Height-5))) || Ball.Bounds.IntersectsWith(new Rectangle(new Point(x.Location.X+ this.pictureBox1.Width, x.Location.Y) , new Size(1,pictureBox1.Height-5))))
                     {
                         this.Controls.Remove(x);
                         ballx = -ballx;
@@ -143,6 +148,16 @@ namespace minigame_breakout
                     MessageBox.Show("you win!");
                 }
             }
+            //xu ly banh va cham voi player
+            if (Ball.Bounds.IntersectsWith(new Rectangle(new Point(button1.Location.X,button1.Location.Y), new Size(1,button1.Height))) || Ball.Bounds.IntersectsWith(new Rectangle(new Point(button1.Location.X + this.button1.Width, button1.Location.Y), new Size(1, button1.Height))))
+            {
+                ballx = -ballx;
+            }
+            else if (Ball.Bounds.IntersectsWith(button1.Bounds))
+            {
+                bally = -bally;
+            }
+
         }
     }
 }
