@@ -31,6 +31,7 @@ các tính năng:
 27. giao diện chiến thắng-thua cuộc (chưa thực hiện)
 28. chế độ chơi 2 người (không có block, mỗi bên 5 mạng, ai thắng 3 là win) (chưa thực hiện)
 29. chế độ chơi với máy (như trên) (chưa thực hiện)
+30. tạo máy dễ-vừa-khó-rất khó
 
 các bugs:
 1.va chạm với cạnh bên của player bóng chuyển động bất thường
