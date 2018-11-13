@@ -450,13 +450,15 @@
             // 
             // Player
             // 
-            this.Player.Location = new System.Drawing.Point(355, 618);
+            this.Player.BackColor = System.Drawing.Color.Transparent;
+            this.Player.ButtonText = null;
+            this.Player.GoLeft = false;
+            this.Player.GoRight = false;
+            this.Player.Location = new System.Drawing.Point(360, 620);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(180, 29);
+            this.Player.Size = new System.Drawing.Size(162, 27);
             this.Player.Speed = 5;
             this.Player.TabIndex = 38;
-            this.Player.Text = "player";
-            this.Player.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

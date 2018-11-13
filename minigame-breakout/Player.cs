@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace minigame_breakout
 {
-    public partial class Player : Button
+    public partial class Player : PlayerButton
     {
         #region properties
         private int speed = 5;
@@ -19,13 +20,14 @@ namespace minigame_breakout
         public Player()
         {
             InitializeComponent();
+            this.BackColor = Color.AliceBlue;
         }
 
         public int Speed { get => speed; set => speed = value; }
         public bool GoRight { get => goRight; set => goRight = value; }
         public bool GoLeft { get => goLeft; set => goLeft = value; }
         #endregion
-
+       
         #region functions
         public void move()
         {

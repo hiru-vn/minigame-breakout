@@ -18,6 +18,7 @@ namespace minigame_breakout
         {
             InitializeComponent();
             setDefault();
+            //this.timer1.Interval = 100;
         }
         #endregion
 

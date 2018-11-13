@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace minigame_breakout
 {
@@ -22,6 +23,18 @@ namespace minigame_breakout
 
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
+        #endregion
+
+        #region design
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            using (var gp = new GraphicsPath())
+            {
+                gp.AddEllipse(new Rectangle(0, 0, this.Width - 1, this.Height - 1));
+                this.Region = new Region(gp);
+            }
+        }
         #endregion
 
         #region functions
@@ -60,7 +73,10 @@ namespace minigame_breakout
             }
             else if (this.Bounds.IntersectsWith(new Rectangle(player.Location, new Size(player.Width, 1))))
             {
-                this.reverseY();
+                if (Y > 0)
+                {
+                    this.reverseY();
+                }
             }
         }
         //Xu ly va cham voi block
