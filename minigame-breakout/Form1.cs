@@ -18,7 +18,7 @@ namespace minigame_breakout
         {
             InitializeComponent();
             setDefault();
-            //this.timer1.Interval = 100;
+            this.timer1.Interval = 20;
         }
         #endregion
 
@@ -36,13 +36,30 @@ namespace minigame_breakout
                 Player.GoLeft = false;
             }
         }
-
         private void keyisup(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
                 Player.GoLeft = false;
             else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.S)
                 Player.GoRight = false;
+        }
+        private void MouseIsMove(object sender, MouseEventArgs e)
+        {
+            if (e.Location.X - Player.Width / 2 > Player.Location.X)
+            {
+                Player.GoRight = true;
+                Player.GoLeft = false;
+            }
+            else if (e.Location.X - Player.Width / 2 < Player.Location.X)
+            {
+                Player.GoLeft = true;
+                Player.GoRight = false;
+            }
+            else
+            {
+                Player.GoLeft = false;
+                Player.GoRight = false;
+            }
         }
         #endregion
 
@@ -61,12 +78,7 @@ namespace minigame_breakout
             Ball.collision_Wall(ClientSize.Width);
             //banh roi ra ngoai
             if (Ball.fall_Out(ClientSize.Height))
-            {
-                //loseStage();
-                this.timer1.Enabled = false;
-                this.Controls.Clear();
-                MessageBox.Show("you lose");
-            }
+                loseStage();
             //banh va cham voi block
             foreach (Control x in this.Controls)
             {
@@ -78,14 +90,8 @@ namespace minigame_breakout
                         this.Controls.Remove(x);
                     }
                 }
-                if (score> 34)
-                {
-                    this.timer1.Enabled = false;
-                    this.Controls.Clear();
-                    score = 0;
-                    //winStage();
-                    MessageBox.Show("you win!");
-                }
+                if (score > 34)
+                    winStage();
             }
             //xu ly banh va cham voi player
             Ball.collision_Player(Player);
@@ -95,14 +101,6 @@ namespace minigame_breakout
         #region functions
         private void setDefault()
         {
-            foreach (Control x in this.Controls)
-            {
-                if (x is Block && x.Width > constant.ballHeight)
-                {
-                    x.Tag = "block";
-                }
-            }
-
             Random rnd = new Random();
             foreach (Control x in this.Controls)
             {
@@ -113,6 +111,19 @@ namespace minigame_breakout
                 }
             }
             this.KeyPreview = true;
+        }
+        private void loseStage()
+        {
+            this.timer1.Enabled = false;
+            this.Controls.Clear();
+            MessageBox.Show("you lose!");
+        }
+        private void winStage()
+        {
+            this.timer1.Enabled = false;
+            this.Controls.Clear();
+            score = 0;
+            MessageBox.Show("you win!");
         }
         #endregion
     }

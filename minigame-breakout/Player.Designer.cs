@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Player
+            // 
+            this.Name = "Player";
+            this.ResumeLayout(false);
         }
 
         #endregion

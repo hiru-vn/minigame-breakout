@@ -456,7 +456,7 @@
             this.Player.GoRight = false;
             this.Player.Location = new System.Drawing.Point(360, 620);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(162, 27);
+            this.Player.Size = new System.Drawing.Size(131, 27);
             this.Player.Speed = 5;
             this.Player.TabIndex = 38;
             // 
@@ -509,6 +509,7 @@
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseIsMove);
             ((System.ComponentModel.ISupportInitialize)(this.block31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block33)).EndInit();

@@ -15,24 +15,27 @@ namespace minigame_breakout
     {
         #region properties
         private int speed = 5;
-        bool goLeft = false;
-        bool goRight = false;
+        private bool goLeft = false;
+        private bool goRight = false;
+        private bool buffSpeed = false;
+
         public Player()
         {
             InitializeComponent();
             this.BackColor = Color.AliceBlue;
         }
 
-        public int Speed { get => speed; set => speed = value; }
         public bool GoRight { get => goRight; set => goRight = value; }
         public bool GoLeft { get => goLeft; set => goLeft = value; }
+        public int Speed { get => speed; set => speed = value; }
         #endregion
-       
+
         #region functions
         public void move()
         {
-            if (this.GoLeft) { this.Left -= this.Speed; }
-            else if (this.GoRight) { this.Left += this.Speed; }
+            if (buffSpeed) this.speed = 10;
+            if (this.GoLeft) { this.Left -= this.speed; }
+            else if (this.GoRight) { this.Left += this.speed; }
         }
         public void collision_Wall(int clientWidthSize)
         {

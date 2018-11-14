@@ -18,3 +18,4 @@ D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.cs
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csproj.CoreCompileInputs.cache
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.exe
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.pdb
+D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.Player.resources

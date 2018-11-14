@@ -87,7 +87,7 @@ namespace minigame_breakout
         /// the mouse state in relation to the 
         /// current instance of the control.
         /// </summary>
-        enum State { None, Hover, Pressed };
+        protected enum State { None, Hover, Pressed };
 
         /// <summary>
         /// A public enumeration that determines whether
@@ -112,11 +112,11 @@ namespace minigame_breakout
 
         #region -  Private Variables  -
 
-        private bool calledbykey = false;
-        private State mButtonState = State.None;
-        private Timer mFadeIn = new Timer();
-        private Timer mFadeOut = new Timer();
-        private int mGlowAlpha = 0;
+        protected bool calledbykey = false;
+        protected State mButtonState = State.None;
+        protected Timer mFadeIn = new Timer();
+        protected Timer mFadeOut = new Timer();
+        protected int mGlowAlpha = 0;
 
         #endregion
 
@@ -218,7 +218,7 @@ namespace minigame_breakout
 
         #region -  Appearance  -
 
-        private Style mButtonStyle = Style.Default;
+        protected Style mButtonStyle = Style.Default;
         /// <summary>
         /// Sets whether the button background is drawn 
         /// while the mouse is outside of the client area.

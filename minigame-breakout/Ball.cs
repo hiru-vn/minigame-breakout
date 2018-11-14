@@ -26,13 +26,15 @@ namespace minigame_breakout
         #endregion
 
         #region design
-        protected override void OnResize(EventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnResize(e);
-            using (var gp = new GraphicsPath())
+            base.OnPaint(e);
+            using (GraphicsPath gp = new GraphicsPath())
             {
-                gp.AddEllipse(new Rectangle(0, 0, this.Width - 1, this.Height - 1));
-                this.Region = new Region(gp);
+                gp.AddEllipse(0, 0, this.Width - 1, this.Height - 1);
+                Region = new Region(gp);
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                e.Graphics.DrawEllipse(new Pen(new SolidBrush(this.BackColor), 1), 0, 0, this.Width - 1, this.Height - 1);
             }
         }
         #endregion
@@ -55,7 +57,7 @@ namespace minigame_breakout
         //Xu ly va cham voi tuong
         public void collision_Wall(int clientWidthSize)
         {
-            if (this.Left + constant.ballHeight > clientWidthSize || this.Left < 1)
+            if (this.Left + constant.ballHeight > clientWidthSize || this.Left < 5)
             {
                 this.reverseX();
             }
@@ -67,14 +69,18 @@ namespace minigame_breakout
         //Xu ly va cham voi player
         public void collision_Player(Player player)
         {
-            if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(1, player.Height))) || this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width, player.Location.Y), new Size(1, player.Height))))
+            if (Y > 0)
             {
-                this.reverseX();
-            }
-            else if (this.Bounds.IntersectsWith(new Rectangle(player.Location, new Size(player.Width, 1))))
-            {
-                if (Y > 0)
+                if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + 20, player.Location.Y), new Size(player.Width - 40, 1))))
+                    this.reverseY();
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
+                    this.x -= 2;
+                    this.reverseY();
+                }
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
+                {
+                    this.x += 2;
                     this.reverseY();
                 }
             }
@@ -82,10 +88,21 @@ namespace minigame_breakout
         //Xu ly va cham voi block
         public bool collision_Block(Block block)
         {
-            if (this.Bounds.IntersectsWith(new Rectangle(block.Location, new Size(1, block.Height - 5))) || this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X + block.Width, block.Location.Y), new Size(1, block.Height - 5))))
+            if (this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X,block.Location.Y), new Size(1, block.Height))))
             {
-                this.reverseX();
-                return true;
+                if (X > 0)
+                {
+                    this.reverseX();
+                    return true;
+                }
+            }
+            else if (this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X + block.Width, block.Location.Y), new Size(1, block.Height))))
+            {
+                if (X < 0)
+                {
+                    this.reverseX();
+                    return true;
+                }
             }
             else if (this.Bounds.IntersectsWith(block.Bounds))
             {
