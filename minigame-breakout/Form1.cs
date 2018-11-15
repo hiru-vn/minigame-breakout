@@ -13,7 +13,7 @@ namespace minigame_breakout
     public partial class Form1 : Form
     {
         #region properties
-        int score = 0;
+        private int score = 0;
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +35,10 @@ namespace minigame_breakout
                 Player.GoRight = true;
                 Player.GoLeft = false;
             }
+            else if (e.KeyCode == Keys.Space)
+            {
+                Player.IsBouncing = true;
+            }
         }
         private void keyisup(object sender, KeyEventArgs e)
         {
@@ -42,15 +46,19 @@ namespace minigame_breakout
                 Player.GoLeft = false;
             else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.S)
                 Player.GoRight = false;
+            else if (e.KeyCode == Keys.Space)
+            {
+                Player.IsBouncing = false;
+            }
         }
         private void MouseIsMove(object sender, MouseEventArgs e)
         {
-            if (e.Location.X - Player.Width / 2 > Player.Location.X)
+            if (e.Location.X - Player.Width / 2 > Player.Location.X-5)
             {
                 Player.GoRight = true;
                 Player.GoLeft = false;
             }
-            else if (e.Location.X - Player.Width / 2 < Player.Location.X)
+            else if (e.Location.X - Player.Width / 2 < Player.Location.X+5)
             {
                 Player.GoLeft = true;
                 Player.GoRight = false;
@@ -60,6 +68,17 @@ namespace minigame_breakout
                 Player.GoLeft = false;
                 Player.GoRight = false;
             }
+        }
+        private void MouseIsDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                Player.IsBouncing = true;
+
+        }
+        private void MouseIsUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                Player.IsBouncing = false;
         }
         #endregion
 
@@ -86,11 +105,12 @@ namespace minigame_breakout
                 {
                     if (Ball.collision_Block(x as Block))
                     {
-                        score++;
+                        score+=Ball.GetScore();
                         this.Controls.Remove(x);
+                        Block.count--;
                     }
                 }
-                if (score > 34)
+                if (Block.count < 1)
                     winStage();
             }
             //xu ly banh va cham voi player

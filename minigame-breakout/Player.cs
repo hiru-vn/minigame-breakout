@@ -17,7 +17,8 @@ namespace minigame_breakout
         private int speed = 5;
         private bool goLeft = false;
         private bool goRight = false;
-        private bool buffSpeed = false;
+        private bool isBuffSpeed = false;
+        private bool isBouncing = false;
 
         public Player()
         {
@@ -28,12 +29,14 @@ namespace minigame_breakout
         public bool GoRight { get => goRight; set => goRight = value; }
         public bool GoLeft { get => goLeft; set => goLeft = value; }
         public int Speed { get => speed; set => speed = value; }
+        public bool IsBuffSpeed { get => isBuffSpeed; set => isBuffSpeed = value; }
+        public bool IsBouncing { get => isBouncing; set => isBouncing = value; }
         #endregion
 
         #region functions
         public void move()
         {
-            if (buffSpeed) this.speed = 10;
+            if (isBuffSpeed) this.speed = 10;
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }

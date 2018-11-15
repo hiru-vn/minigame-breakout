@@ -454,7 +454,9 @@
             this.Player.ButtonText = null;
             this.Player.GoLeft = false;
             this.Player.GoRight = false;
-            this.Player.Location = new System.Drawing.Point(360, 620);
+            this.Player.IsBouncing = false;
+            this.Player.IsBuffSpeed = false;
+            this.Player.Location = new System.Drawing.Point(374, 658);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(131, 27);
             this.Player.Speed = 5;
@@ -465,7 +467,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(906, 659);
+            this.ClientSize = new System.Drawing.Size(906, 697);
             this.Controls.Add(this.block31);
             this.Controls.Add(this.block32);
             this.Controls.Add(this.block33);
@@ -509,7 +511,9 @@
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseIsDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseIsMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.block31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block33)).EndInit();

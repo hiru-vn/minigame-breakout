@@ -13,9 +13,11 @@ namespace minigame_breakout
     public partial class Block : PictureBox
     {
         #region properties
+        public static int count=0;
         public Block()
         {
             InitializeComponent();
+            count++;
         }
         #endregion
 

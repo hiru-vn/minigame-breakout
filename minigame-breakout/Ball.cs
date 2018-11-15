@@ -16,6 +16,9 @@ namespace minigame_breakout
         #region properties
         private int x=5;
         private int y=5;
+        private int ballHits = 0;
+        private int timesScore = 1;
+        private int speedLevel = 1;
         public Ball()
         {
             InitializeComponent();
@@ -57,9 +60,15 @@ namespace minigame_breakout
         //Xu ly va cham voi tuong
         public void collision_Wall(int clientWidthSize)
         {
-            if (this.Left + constant.ballHeight > clientWidthSize || this.Left < 5)
+            if (this.Left + constant.ballHeight > clientWidthSize)
             {
-                this.reverseX();
+                if (X>0)
+                    this.reverseX();
+            }
+            else if (this.Left < 5)
+            {
+                if (X<0)
+                    this.reverseX();
             }
             if (this.Top < 1)
             {
@@ -72,16 +81,24 @@ namespace minigame_breakout
             if (Y > 0)
             {
                 if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + 20, player.Location.Y), new Size(player.Width - 40, 1))))
+                {
                     this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(player.IsBouncing);
+                }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
                     this.x -= 2;
                     this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(player.IsBouncing);
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
                 {
                     this.x += 2;
                     this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(player.IsBouncing);
                 }
             }
         }
@@ -93,6 +110,7 @@ namespace minigame_breakout
                 if (X > 0)
                 {
                     this.reverseX();
+                    addHitsPoint();
                     return true;
                 }
             }
@@ -101,12 +119,14 @@ namespace minigame_breakout
                 if (X < 0)
                 {
                     this.reverseX();
+                    addHitsPoint();
                     return true;
                 }
             }
             else if (this.Bounds.IntersectsWith(block.Bounds))
             {
                 this.reverseY();
+                addHitsPoint();
                 return true;
             }
             return false;
@@ -119,6 +139,38 @@ namespace minigame_breakout
                 return true;
             }
             return false;
+        }
+        //Xu ly so diem tra ve khi va cham voi block (moi 3 block bi huy trong 1 lan phong tang 1 diem moi block tiep theo bi huy)
+        public int GetScore()
+        {
+            return timesScore;
+        }
+        public void ResetHitsPoint()
+        {
+            ballHits = 0;
+            timesScore = 1;
+        }
+        public void addHitsPoint()
+        {
+            ballHits++;
+            if (ballHits>3)
+            {
+                timesScore++;
+                ballHits = 0;
+            }
+        }
+        public void SpeedChange(bool isBouncing)
+        {
+            if (isBouncing)
+            {
+                if (speedLevel < 4) speedLevel++;
+                if (speedLevel == 2) BackColor = Color.Orange;
+                if (speedLevel == 3) BackColor = Color.OrangeRed;
+                if (speedLevel == 4) BackColor = Color.DarkRed;
+
+                x = (int)(x * 1.2);
+                y = (int)(y * 1.2);
+            }
         }
         #endregion
     }
