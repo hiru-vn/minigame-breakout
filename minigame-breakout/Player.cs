@@ -37,6 +37,8 @@ namespace minigame_breakout
         public void move()
         {
             if (isBuffSpeed) this.speed = 10;
+            if (isBouncing) this.ButtonColor = Color.Black;
+            else this.ButtonColor = Color.Black;
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }
