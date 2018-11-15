@@ -9,8 +9,8 @@ các tính năng:
 5. điều khiển player trái-phải bằng chuột
 6. độ phản của bóng là 45 độ khi va chạm ở trung tâm player và nhỏ hoặc lớn hơn 45 khi va chạm gần rìa player
 7. thêm thời gian đếm lui trong chế độ chơi single play (chưa thực hiện)
-8. score tăng lên nếu bóng phá được nhiều gạch hơn trong 1 lần phóng (cứ 3 gạch phá thì gạch tiếp theo phá sẽ tăng thêm 1 điểm) (đang thực hiện)
-9. khi nhấn enter player sẽ đổi màu, bóng chạm player đổi màu sẽ tăng lv tốc độ tiếp theo trong 8s nữa (không cộng dồn với thời gian hiệu lực tốc độ trước đó), có 4 level tốc độ (đang thực hiện)
+8. score tăng lên nếu bóng phá được nhiều gạch hơn trong 1 lần phóng (cứ 3 gạch phá thì gạch tiếp theo phá sẽ tăng thêm 1 điểm)
+9. khi nhấn enter player sẽ đổi màu, bóng chạm player đổi màu sẽ tăng lv tốc độ tiếp theo, có 4 level tốc độ
 10. nâng cấp giao diện - nền (chưa thực hiện)
 11. nâng cấp giao diện - bóng, số kiểu bóng tối đa không giới hạn (chưa thực hiện)
 12. nâng cấp giao diện - player, số kiểu player tối đa không giới hạn (chưa thực hiện)
