@@ -117,4 +117,200 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ball0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ball0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ball2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ball2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brickBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brickBlue_Broken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\02-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brickGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\03-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brickGreen_broken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\04-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skyatnight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>skyatnight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_05_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\05-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_06_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\06-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_07_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\07-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_08_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\08-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_09_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\09-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_10_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_11_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_12_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_13_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_14_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\14-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_15_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_17_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_18_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_21_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\21-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_22_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_23_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\23-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_25_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\25-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_26_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\26-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_27_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\27-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_28_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\28-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_29_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\29-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_30_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\30-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_31_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_33_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\33-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_34_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_35_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\35-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_36_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\36-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_37_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\37-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_38_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\38-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_39_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\39-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_40_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\40-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_41_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\41-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_42_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\42-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_43_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\43-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_44_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_45_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\45-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_46_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\46-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_47_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\47-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_48_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_49_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\49-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_51_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\51-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_52_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_53_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\53-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_54_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\54-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_55_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\55-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_56_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\56-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_57_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\57-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_59_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\59-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_60_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\60-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_61_Breakout_Tiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\61-Breakout-Tiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -108,5 +108,200 @@
   <ItemGroup>
     <None Include="Resources\Img.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\skyatnight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\06-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\08-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61-Breakout-Tiles.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

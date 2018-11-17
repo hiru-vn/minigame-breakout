@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.labelScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Player = new minigame_breakout.Player();
             this.block31 = new minigame_breakout.Block();
             this.block32 = new minigame_breakout.Block();
             this.block33 = new minigame_breakout.Block();
@@ -67,7 +68,6 @@
             this.block2 = new minigame_breakout.Block();
             this.block1 = new minigame_breakout.Block();
             this.Ball = new minigame_breakout.Ball();
-            this.Player = new minigame_breakout.Player();
             ((System.ComponentModel.ISupportInitialize)(this.block31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block33)).BeginInit();
@@ -121,6 +121,20 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Player
+            // 
+            this.Player.BackColor = System.Drawing.Color.Transparent;
+            this.Player.ButtonText = null;
+            this.Player.GoLeft = false;
+            this.Player.GoRight = false;
+            this.Player.IsBouncing = false;
+            this.Player.IsBuffSpeed = false;
+            this.Player.Location = new System.Drawing.Point(364, 704);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(131, 27);
+            this.Player.Speed = 5;
+            this.Player.TabIndex = 38;
             // 
             // block31
             // 
@@ -439,35 +453,24 @@
             // 
             // Ball
             // 
-            this.Ball.BackColor = System.Drawing.Color.Yellow;
+            this.Ball.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Ball.BackgroundImage = global::minigame_breakout.Properties.Resources.ball0;
+            this.Ball.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ball.Location = new System.Drawing.Point(428, 471);
             this.Ball.Name = "Ball";
             this.Ball.Size = new System.Drawing.Size(25, 25);
+            this.Ball.Skin = 0;
             this.Ball.TabIndex = 39;
             this.Ball.TabStop = false;
             this.Ball.X = 5;
             this.Ball.Y = 5;
-            // 
-            // Player
-            // 
-            this.Player.BackColor = System.Drawing.Color.Transparent;
-            this.Player.ButtonText = null;
-            this.Player.GoLeft = false;
-            this.Player.GoRight = false;
-            this.Player.IsBouncing = false;
-            this.Player.IsBuffSpeed = false;
-            this.Player.Location = new System.Drawing.Point(374, 658);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(131, 27);
-            this.Player.Speed = 5;
-            this.Player.TabIndex = 38;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(906, 697);
+            this.ClientSize = new System.Drawing.Size(907, 750);
             this.Controls.Add(this.block31);
             this.Controls.Add(this.block32);
             this.Controls.Add(this.block33);
@@ -508,6 +511,7 @@
             this.Controls.Add(this.labelScore);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);

@@ -18,7 +18,6 @@ namespace minigame_breakout
         {
             InitializeComponent();
             setDefault();
-            this.timer1.Interval = 20;
         }
         #endregion
 
@@ -53,12 +52,12 @@ namespace minigame_breakout
         }
         private void MouseIsMove(object sender, MouseEventArgs e)
         {
-            if (e.Location.X - Player.Width / 2 > Player.Location.X-5)
+            if (e.Location.X - Player.Width / 2 > Player.Location.X)
             {
                 Player.GoRight = true;
                 Player.GoLeft = false;
             }
-            else if (e.Location.X - Player.Width / 2 < Player.Location.X+5)
+            else if (e.Location.X - Player.Width / 2 < Player.Location.X)
             {
                 Player.GoLeft = true;
                 Player.GoRight = false;
@@ -121,6 +120,10 @@ namespace minigame_breakout
         #region functions
         private void setDefault()
         {
+            this.timer1.Interval = 20;
+            this.DoubleBuffered = true;
+            this.BackgroundImage = Properties.Resources.skyatnight;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             Random rnd = new Random();
             foreach (Control x in this.Controls)
             {
@@ -128,6 +131,8 @@ namespace minigame_breakout
                 {
                     Color rndColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                     x.BackColor = rndColor;
+                    x.BackgroundImage = Properties.Resources.brick;
+                    x.BackgroundImageLayout = ImageLayout.Stretch;
                 }
             }
             this.KeyPreview = true;

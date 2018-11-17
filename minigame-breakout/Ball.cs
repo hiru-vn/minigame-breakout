@@ -19,13 +19,16 @@ namespace minigame_breakout
         private int ballHits = 0;
         private int timesScore = 1;
         private int speedLevel = 1;
+        private int skin = 0;
         public Ball()
         {
             InitializeComponent();
+            setSkin();
         }
 
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
+        public int Skin { get => skin; set => skin = value; }
         #endregion
 
         #region design
@@ -34,10 +37,10 @@ namespace minigame_breakout
             base.OnPaint(e);
             using (GraphicsPath gp = new GraphicsPath())
             {
+                e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+                e.Graphics.DrawEllipse(new Pen(new SolidBrush(this.BackColor), 1), 0, 0, this.Width - 1, this.Height - 1);
                 gp.AddEllipse(0, 0, this.Width - 1, this.Height - 1);
                 Region = new Region(gp);
-                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                e.Graphics.DrawEllipse(new Pen(new SolidBrush(this.BackColor), 1), 0, 0, this.Width - 1, this.Height - 1);
             }
         }
         #endregion
@@ -159,6 +162,7 @@ namespace minigame_breakout
                 ballHits = 0;
             }
         }
+        //speed
         public void SpeedChange(bool isBouncing)
         {
             if (isBouncing)
@@ -171,6 +175,12 @@ namespace minigame_breakout
                 x = (int)(x * 1.2);
                 y = (int)(y * 1.2);
             }
+        }
+        public void setSkin()
+        {
+            if (skin == 0) this.BackgroundImage = Properties.Resources.ball0;
+            if (skin == 1) this.BackgroundImage = Properties.Resources.ball1;
+            if (skin == 2) this.BackgroundImage = Properties.Resources.ball2;
         }
         #endregion
     }

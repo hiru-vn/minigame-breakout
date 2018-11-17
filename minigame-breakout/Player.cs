@@ -19,11 +19,13 @@ namespace minigame_breakout
         private bool goRight = false;
         private bool isBuffSpeed = false;
         private bool isBouncing = false;
+        private int skin=0;
 
         public Player()
         {
             InitializeComponent();
             this.BackColor = Color.AliceBlue;
+            this.ResizeRedraw = false;
         }
 
         public bool GoRight { get => goRight; set => goRight = value; }
@@ -36,7 +38,7 @@ namespace minigame_breakout
         #region functions
         public void move()
         {
-            if (isBuffSpeed) this.speed = 10;
+            /*if (isBuffSpeed)*/ this.speed = 10;
             if (isBouncing) this.ButtonColor = Color.Black;
             else this.ButtonColor = Color.Black;
             if (this.GoLeft) { this.Left -= this.speed; }
