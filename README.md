@@ -11,13 +11,13 @@ các tính năng:
 7. thêm thời gian đếm lui trong chế độ chơi single play (chưa thực hiện)
 8. score tăng lên nếu bóng phá được nhiều gạch hơn trong 1 lần phóng (cứ 3 gạch phá thì gạch tiếp theo phá sẽ tăng thêm 1 điểm)
 9. khi nhấn enter player sẽ đổi màu, bóng chạm player đổi màu sẽ tăng lv tốc độ tiếp theo, có 4 level tốc độ
-10. nâng cấp giao diện - nền (chưa thực hiện)
-11. nâng cấp giao diện - bóng, số kiểu bóng tối đa không giới hạn (chưa thực hiện)
-12. nâng cấp giao diện - player, số kiểu player tối đa không giới hạn (chưa thực hiện)
-13. nâng cấp giao diện - block (chưa thực hiện)
+10. nâng cấp giao diện - nền 
+11. nâng cấp giao diện - bóng, số kiểu bóng tối đa không giới hạn 
+12. nâng cấp giao diện - player, số kiểu player tối đa không giới hạn 
+13. nâng cấp giao diện - block 
 14. item rớt ra từ block: x3 bóng (chưa thực hiện)
-15. item rớt ra từ block: kéo dài player (chưa thực hiện)
-16. item rớt ra từ block: rút ngắn player (chưa thực hiện)
+15. item rớt ra từ block: kéo dài player 
+16. item rớt ra từ block: rút ngắn player 
 17. item rớt ra từ block: dính bóng (phát lại bóng băng nút enter hoặc chuột trái) (chưa thực hiện)
 18. item rớt ra từ block: thêm mạng (chưa thực hiện)
 19. item rớt ra từ block: đạn (5 lần bắn, mỗi lần 2 viên, sạc đạn 1s) (chưa thực hiện)
