@@ -19,10 +19,11 @@ namespace minigame_breakout
         private int ballHits = 0;
         private int timesScore = 1;
         private int speedLevel = 1;
-        private int skin = 0;
+        private int skin = 3;
         public Ball()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             setSkin();
         }
 
@@ -37,7 +38,7 @@ namespace minigame_breakout
             base.OnPaint(e);
             using (GraphicsPath gp = new GraphicsPath())
             {
-                e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 e.Graphics.DrawEllipse(new Pen(new SolidBrush(this.BackColor), 1), 0, 0, this.Width - 1, this.Height - 1);
                 gp.AddEllipse(0, 0, this.Width - 1, this.Height - 1);
                 Region = new Region(gp);
@@ -167,20 +168,27 @@ namespace minigame_breakout
         {
             if (isBouncing)
             {
-                if (speedLevel < 4) speedLevel++;
-                if (speedLevel == 2) BackColor = Color.Orange;
-                if (speedLevel == 3) BackColor = Color.OrangeRed;
-                if (speedLevel == 4) BackColor = Color.DarkRed;
+                if (speedLevel < 4)
+                {
+                    speedLevel++;
+                    if (speedLevel == 2) BackColor = Color.Orange;
+                    if (speedLevel == 3) BackColor = Color.OrangeRed;
+                    if (speedLevel == 4) BackColor = Color.DarkRed;
 
-                x = (int)(x * 1.2);
-                y = (int)(y * 1.2);
+                    x = (int)(x * 1.2);
+                    y = (int)(y * 1.2);
+                }
             }
         }
         public void setSkin()
         {
             if (skin == 0) this.BackgroundImage = Properties.Resources.ball0;
-            if (skin == 1) this.BackgroundImage = Properties.Resources.ball1;
-            if (skin == 2) this.BackgroundImage = Properties.Resources.ball2;
+            else if (skin == 1) this.BackgroundImage = Properties.Resources.ball1;
+            else if (skin == 2) this.BackgroundImage = Properties.Resources.ball2;
+            else if (skin == 3) this.BackgroundImage = Properties.Resources.ball3;
+            else if (skin == 4) this.BackgroundImage = Properties.Resources.ball4;
+            else if (skin == 5) this.BackgroundImage = Properties.Resources.ball5;
+            else if (skin == 6) this.BackgroundImage = Properties.Resources.ball6;
         }
         #endregion
     }

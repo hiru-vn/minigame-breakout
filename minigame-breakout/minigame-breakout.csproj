@@ -65,6 +65,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,9 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Img.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\skyatnight.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ball.png" />
@@ -302,6 +305,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\61-Breakout-Tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\skyatnight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_fast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_x3ball.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_lengthen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_shorten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_slow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_fast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\function_gun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funtion_cromball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cromball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cromball.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

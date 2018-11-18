@@ -105,8 +105,22 @@ namespace minigame_breakout
                     if (Ball.collision_Block(x as Block))
                     {
                         score+=Ball.GetScore();
+                        if (x.Tag == "item")
+                        {
+                            Item item = new Item();
+                            item.Location = new Point(x.Location.X + x.Width / 2, x.Location.Y + x.Height);
+                            this.Controls.Add(item);
+                        }
                         this.Controls.Remove(x);
                         Block.count--;
+                    }
+                }
+                if (x is Item)
+                {
+                    (x as Item).move();
+                    if (Player.collision_Item(x as Item))
+                    {
+                        this.Controls.Remove(x);
                     }
                 }
                 if (Block.count < 1)
@@ -122,7 +136,7 @@ namespace minigame_breakout
         {
             this.timer1.Interval = 20;
             this.DoubleBuffered = true;
-            this.BackgroundImage = Properties.Resources.skyatnight;
+            this.BackgroundImage = Properties.Resources.background2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             Random rnd = new Random();
             foreach (Control x in this.Controls)
@@ -131,8 +145,9 @@ namespace minigame_breakout
                 {
                     Color rndColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                     x.BackColor = rndColor;
-                    x.BackgroundImage = Properties.Resources.brick;
-                    x.BackgroundImageLayout = ImageLayout.Stretch;
+                    int containItems = rnd.Next(6);
+                    if (containItems == 0)
+                        x.Tag = "item";
                 }
             }
             this.KeyPreview = true;

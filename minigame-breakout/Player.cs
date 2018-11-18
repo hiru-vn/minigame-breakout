@@ -19,8 +19,6 @@ namespace minigame_breakout
         private bool goRight = false;
         private bool isBuffSpeed = false;
         private bool isBouncing = false;
-        private int skin=0;
-
         public Player()
         {
             InitializeComponent();
@@ -44,6 +42,7 @@ namespace minigame_breakout
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }
+        //xu ly va cham voi tuong
         public void collision_Wall(int clientWidthSize)
         {
             if (this.Left < 1)
@@ -54,6 +53,46 @@ namespace minigame_breakout
             {
                 this.GoRight = false;
             }
+        }
+        //xu ly va cham voi item
+        public bool collision_Item(Item item)
+        {
+            if (this.Bounds.IntersectsWith(item.Bounds))
+            {
+                int func = item.Function;
+                if (func == 0)
+                {
+                    Random rnd = new Random();
+                    int generator = rnd.Next(7)+1;
+                    func = generator;
+                }
+                if (func == 1)
+                {
+                    speed = (int)(speed * 0.6);
+                }
+                if (func == 2)
+                {
+                    speed = (int)(speed * 1.5);
+                }
+                if (func == 3)
+                {
+                    //later
+                }
+                if (func == 4)
+                {
+                    Width *= 2;
+                }
+                if (func == 5)
+                {
+                    Width /= 2;
+                }
+                if (func == 6)
+                {
+                    //toball
+                }
+                return true;
+            }
+            return false;
         }
         #endregion
     }
