@@ -32,7 +32,6 @@
             // 
             // Player
             // 
-            this.BackImage = global::minigame_breakout.Properties.Resources._52_Breakout_Tiles;
             this.Name = "Player";
             this.ResumeLayout(false);
 

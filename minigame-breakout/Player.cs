@@ -11,19 +11,24 @@ using System.Drawing.Drawing2D;
 
 namespace minigame_breakout
 {
-    public partial class Player : PlayerButton
+    public partial class Player : PictureBox
     {
         #region properties
-        private int speed = 5;
+        private int speed = 10;
         private bool goLeft = false;
         private bool goRight = false;
         private bool isBuffSpeed = false;
+        private bool isSlowSpeed = false;
         private bool isBouncing = false;
+        private bool isShorten = false;
+        private bool isLengthen = false;
+        private bool isGunMode = false;
+        private int image = 1;
+
         public Player()
         {
             InitializeComponent();
-            this.BackColor = Color.AliceBlue;
-            this.ResizeRedraw = false;
+            GetImage();
         }
 
         public bool GoRight { get => goRight; set => goRight = value; }
@@ -34,11 +39,63 @@ namespace minigame_breakout
         #endregion
 
         #region functions
+        public void GetImage()
+        {
+            this.ResizeRedraw = false;
+            this.BackgroundImage = Properties.Resources.player_1;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+       
+        public void BouncingMode()
+        {
+            if (image == 1)
+            {
+                image = 2;
+                this.BackgroundImage = Properties.Resources.player_2;
+            }
+            else if (image == 2)
+            {
+                image = 3;
+                this.BackgroundImage = Properties.Resources.player_3;
+            }
+            else if (image == 3)
+            {
+                image = 1;
+                this.BackgroundImage = Properties.Resources.player_1;
+            }
+        }
+        public void GunMode()
+        {
+            if (IsBouncing)
+            {
+                if (image == 1)
+                {
+                    image = 2;
+                    this.BackgroundImage = Properties.Resources.player_gunmode2;
+                }
+                else if (image == 2)
+                {
+                    image = 3;
+                    this.BackgroundImage = Properties.Resources.player_gunmode3;
+                }
+                else if (image == 3)
+                {
+                    image = 1;
+                    this.BackgroundImage = Properties.Resources.player_gunmode1;
+                }
+            }
+            else
+            {
+                this.BackgroundImage = Properties.Resources.player_gunmode2;
+            }
+        }
+        //di chuyen
         public void move()
         {
-            /*if (isBuffSpeed)*/ this.speed = 10;
-            if (isBouncing) this.ButtonColor = Color.Black;
-            else this.ButtonColor = Color.Black;
+            this.speed = 8;
+            if (isSlowSpeed) this.speed = 5;
+            if (isBuffSpeed) this.speed = 13;
+            if (isBouncing && !isShorten && !isLengthen) BouncingMode();
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }
@@ -55,7 +112,7 @@ namespace minigame_breakout
             }
         }
         //xu ly va cham voi item
-        public bool collision_Item(Item item)
+        public int collision_Item(Item item)
         {
             if (this.Bounds.IntersectsWith(item.Bounds))
             {
@@ -68,31 +125,68 @@ namespace minigame_breakout
                 }
                 if (func == 1)
                 {
-                    speed = (int)(speed * 0.6);
+                    this.isSlowSpeed = true;
+                    this.isBuffSpeed = false;
                 }
-                if (func == 2)
+                else if (func == 2)
                 {
-                    speed = (int)(speed * 1.5);
+                    this.isSlowSpeed = false;
+                    this.isBuffSpeed = true;
                 }
-                if (func == 3)
-                {
-                    //later
-                }
-                if (func == 4)
-                {
-                    Width *= 2;
-                }
-                if (func == 5)
-                {
-                    Width /= 2;
-                }
-                if (func == 6)
+                else if (func == 3)
                 {
                     //toball
                 }
-                return true;
+                else if (func == 4)
+                {
+                    if (!isLengthen)
+                    {
+                        Width = (int)(Width * 1.5);
+                        if (isShorten)
+                        {
+                            isShorten = false;
+                            isLengthen = false;
+                        }
+                        else
+                        {
+                            isLengthen = true;
+                            this.BackgroundImage = Properties.Resources.player_lengthen;
+                        }
+                    }
+                }
+                else if (func == 5)
+                {
+                    if (!isShorten)
+                    {
+                        Width = (int)(Width / 1.5);
+                        if (isLengthen)
+                        {
+                            isShorten = false;
+                            isLengthen = false;
+                        }
+                        else
+                        {
+                            isShorten = true;
+                            this.BackgroundImage = Properties.Resources.player_shorten;
+                        }
+                    }
+                }
+                else if (func == 6)
+                {
+                    //toball
+                }
+                else if (func == 7)
+                {
+                    this.isGunMode = true;
+                    GunMode();                    
+                }
+                else if (func == 8)
+                {
+                    //heart++
+                }
+                return func;
             }
-            return false;
+            return 0;
         }
         #endregion
     }

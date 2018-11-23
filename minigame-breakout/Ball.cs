@@ -20,9 +20,25 @@ namespace minigame_breakout
         private int timesScore = 1;
         private int speedLevel = 1;
         private int skin = 3;
+        private bool isCrom = false;
+        private static int countBall=0;
+
         public Ball()
         {
             InitializeComponent();
+            countBall++;
+            this.DoubleBuffered = true;
+            setSkin();
+        }
+        public Ball(Ball otherBall)
+        {
+            InitializeComponent();
+            this.x = otherBall.x;
+            this.y = otherBall.y;
+            this.speedLevel = otherBall.speedLevel;
+            this.skin = otherBall.skin;
+            this.isCrom = otherBall.isCrom;
+            countBall++;
             this.DoubleBuffered = true;
             setSkin();
         }
@@ -30,6 +46,7 @@ namespace minigame_breakout
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
         public int Skin { get => skin; set => skin = value; }
+        public bool IsCrom { get => isCrom; set => isCrom = value; }
         #endregion
 
         #region design
@@ -107,13 +124,13 @@ namespace minigame_breakout
             }
         }
         //Xu ly va cham voi block
-        public bool collision_Block(Block block)
+        public bool collision_Block(Block2 block)
         {
             if (this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X,block.Location.Y), new Size(1, block.Height))))
             {
                 if (X > 0)
                 {
-                    this.reverseX();
+                    if (!isCrom) this.reverseX();
                     addHitsPoint();
                     return true;
                 }
@@ -122,14 +139,14 @@ namespace minigame_breakout
             {
                 if (X < 0)
                 {
-                    this.reverseX();
+                    if (!isCrom) this.reverseX();
                     addHitsPoint();
                     return true;
                 }
             }
             else if (this.Bounds.IntersectsWith(block.Bounds))
             {
-                this.reverseY();
+                if (!isCrom) this.reverseY();
                 addHitsPoint();
                 return true;
             }
@@ -140,8 +157,15 @@ namespace minigame_breakout
         {
             if (this.Top >= clientHeightSize)
             {
+                countBall--;
                 return true;
             }
+            return false;
+        }
+        public bool all_fall_out()
+        {
+            if (countBall == 0)
+                return true;
             return false;
         }
         //Xu ly so diem tra ve khi va cham voi block (moi 3 block bi huy trong 1 lan phong tang 1 diem moi block tiep theo bi huy)

@@ -83,26 +83,6 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _07_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_07_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _08_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_08_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _09_Breakout_Tiles {
             get {
                 object obj = ResourceManager.GetObject("_09_Breakout_Tiles", resourceCulture);
@@ -136,26 +116,6 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap _12_Breakout_Tiles {
             get {
                 object obj = ResourceManager.GetObject("_12_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _13_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_13_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _14_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_14_Breakout_Tiles", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,79 +473,9 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _50_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_50_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _51_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_51_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _52_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_52_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _53_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_53_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _54_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_54_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _55_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_55_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _59_Breakout_Tiles {
             get {
                 object obj = ResourceManager.GetObject("_59_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _60_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_60_Breakout_Tiles", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,9 +593,9 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brickBlue_Broken {
+        internal static System.Drawing.Bitmap brickBlue_cracked {
             get {
-                object obj = ResourceManager.GetObject("brickBlue_Broken", resourceCulture);
+                object obj = ResourceManager.GetObject("brickBlue_cracked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -723,9 +613,29 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brickGreen_broken {
+        internal static System.Drawing.Bitmap brickGreen_cracked {
             get {
-                object obj = ResourceManager.GetObject("brickGreen_broken", resourceCulture);
+                object obj = ResourceManager.GetObject("brickGreen_cracked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brickRed {
+            get {
+                object obj = ResourceManager.GetObject("brickRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brickRed_cracked {
+            get {
+                object obj = ResourceManager.GetObject("brickRed_cracked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -736,6 +646,26 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap brickWood {
             get {
                 object obj = ResourceManager.GetObject("brickWood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brickYellow {
+            get {
+                object obj = ResourceManager.GetObject("brickYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brickYellow_cracked {
+            get {
+                object obj = ResourceManager.GetObject("brickYellow_cracked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -766,6 +696,16 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap function_gun {
             get {
                 object obj = ResourceManager.GetObject("function_gun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap function_heart {
+            get {
+                object obj = ResourceManager.GetObject("function_heart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -826,6 +766,66 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap funtion_cromball {
             get {
                 object obj = ResourceManager.GetObject("funtion_cromball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_1 {
+            get {
+                object obj = ResourceManager.GetObject("player_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_2 {
+            get {
+                object obj = ResourceManager.GetObject("player_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_3 {
+            get {
+                object obj = ResourceManager.GetObject("player_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_gunmode1 {
+            get {
+                object obj = ResourceManager.GetObject("player_gunmode1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_gunmode2 {
+            get {
+                object obj = ResourceManager.GetObject("player_gunmode2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_gunmode3 {
+            get {
+                object obj = ResourceManager.GetObject("player_gunmode3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

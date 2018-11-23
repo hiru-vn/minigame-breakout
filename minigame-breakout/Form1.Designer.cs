@@ -32,41 +32,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.block31 = new minigame_breakout.Block();
-            this.block32 = new minigame_breakout.Block();
-            this.block33 = new minigame_breakout.Block();
-            this.block34 = new minigame_breakout.Block();
-            this.block35 = new minigame_breakout.Block();
-            this.block26 = new minigame_breakout.Block();
-            this.block27 = new minigame_breakout.Block();
-            this.block28 = new minigame_breakout.Block();
-            this.block29 = new minigame_breakout.Block();
-            this.block30 = new minigame_breakout.Block();
-            this.block21 = new minigame_breakout.Block();
-            this.block22 = new minigame_breakout.Block();
-            this.block23 = new minigame_breakout.Block();
-            this.block24 = new minigame_breakout.Block();
-            this.block25 = new minigame_breakout.Block();
-            this.block16 = new minigame_breakout.Block();
-            this.block17 = new minigame_breakout.Block();
-            this.block18 = new minigame_breakout.Block();
-            this.block19 = new minigame_breakout.Block();
-            this.block20 = new minigame_breakout.Block();
-            this.block11 = new minigame_breakout.Block();
-            this.block12 = new minigame_breakout.Block();
-            this.block13 = new minigame_breakout.Block();
-            this.block14 = new minigame_breakout.Block();
-            this.block15 = new minigame_breakout.Block();
-            this.block6 = new minigame_breakout.Block();
-            this.block7 = new minigame_breakout.Block();
-            this.block8 = new minigame_breakout.Block();
-            this.block9 = new minigame_breakout.Block();
-            this.block10 = new minigame_breakout.Block();
-            this.block5 = new minigame_breakout.Block();
-            this.block4 = new minigame_breakout.Block();
-            this.block3 = new minigame_breakout.Block();
-            this.block2 = new minigame_breakout.Block();
-            this.block1 = new minigame_breakout.Block();
+            this.block31 = new minigame_breakout.Block2();
+            this.block32 = new minigame_breakout.Block2();
+            this.block33 = new minigame_breakout.Block2();
+            this.block34 = new minigame_breakout.Block2();
+            this.block35 = new minigame_breakout.Block2();
+            this.block26 = new minigame_breakout.Block2();
+            this.block27 = new minigame_breakout.Block2();
+            this.block28 = new minigame_breakout.Block2();
+            this.block29 = new minigame_breakout.Block2();
+            this.block30 = new minigame_breakout.Block2();
+            this.block21 = new minigame_breakout.Block2();
+            this.block22 = new minigame_breakout.Block2();
+            this.block23 = new minigame_breakout.Block2();
+            this.block24 = new minigame_breakout.Block2();
+            this.block25 = new minigame_breakout.Block2();
+            this.block16 = new minigame_breakout.Block2();
+            this.block17 = new minigame_breakout.Block2();
+            this.block18 = new minigame_breakout.Block2();
+            this.block19 = new minigame_breakout.Block2();
+            this.block20 = new minigame_breakout.Block2();
+            this.block11 = new minigame_breakout.Block2();
+            this.block12 = new minigame_breakout.Block2();
+            this.block13 = new minigame_breakout.Block2();
+            this.block14 = new minigame_breakout.Block2();
+            this.block15 = new minigame_breakout.Block2();
+            this.block6 = new minigame_breakout.Block2();
+            this.block7 = new minigame_breakout.Block2();
+            this.block8 = new minigame_breakout.Block2();
+            this.block9 = new minigame_breakout.Block2();
+            this.block10 = new minigame_breakout.Block2();
+            this.block5 = new minigame_breakout.Block2();
+            this.block4 = new minigame_breakout.Block2();
+            this.block3 = new minigame_breakout.Block2();
+            this.block2 = new minigame_breakout.Block2();
+            this.block1 = new minigame_breakout.Block2();
             this.Ball = new minigame_breakout.Ball();
             this.Player = new minigame_breakout.Player();
             ((System.ComponentModel.ISupportInitialize)(this.block31)).BeginInit();
@@ -105,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
             // labelScore
@@ -553,8 +554,9 @@
             // 
             // Ball
             // 
-            this.Ball.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Ball.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ball.BackgroundImage")));
             this.Ball.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ball.IsCrom = false;
             this.Ball.Location = new System.Drawing.Point(428, 471);
             this.Ball.Name = "Ball";
             this.Ball.Size = new System.Drawing.Size(28, 28);
@@ -567,8 +569,8 @@
             // Player
             // 
             this.Player.BackColor = System.Drawing.Color.Transparent;
-            this.Player.BackImage = ((System.Drawing.Image)(resources.GetObject("Player.BackImage")));
-            this.Player.ButtonText = null;
+            this.Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Player.BackgroundImage")));
+            this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Player.GoLeft = false;
             this.Player.GoRight = false;
             this.Player.IsBouncing = false;
@@ -578,6 +580,7 @@
             this.Player.Size = new System.Drawing.Size(131, 27);
             this.Player.Speed = 5;
             this.Player.TabIndex = 38;
+            this.Player.TabStop = false;
             // 
             // Form1
             // 
@@ -624,6 +627,7 @@
             this.Controls.Add(this.Player);
             this.Controls.Add(this.labelScore);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -668,6 +672,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,41 +682,41 @@
         private System.Windows.Forms.Timer timer1;
         private Player Player;
         private Ball Ball;
-        private Block block1;
-        private Block block2;
-        private Block block3;
-        private Block block4;
-        private Block block5;
-        private Block block6;
-        private Block block7;
-        private Block block8;
-        private Block block9;
-        private Block block10;
-        private Block block11;
-        private Block block12;
-        private Block block13;
-        private Block block14;
-        private Block block15;
-        private Block block16;
-        private Block block17;
-        private Block block18;
-        private Block block19;
-        private Block block20;
-        private Block block21;
-        private Block block22;
-        private Block block23;
-        private Block block24;
-        private Block block25;
-        private Block block26;
-        private Block block27;
-        private Block block28;
-        private Block block29;
-        private Block block30;
-        private Block block31;
-        private Block block32;
-        private Block block33;
-        private Block block34;
-        private Block block35;
+        private Block2 block1;
+        private Block2 block2;
+        private Block2 block3;
+        private Block2 block4;
+        private Block2 block5;
+        private Block2 block6;
+        private Block2 block7;
+        private Block2 block8;
+        private Block2 block9;
+        private Block2 block10;
+        private Block2 block11;
+        private Block2 block12;
+        private Block2 block13;
+        private Block2 block14;
+        private Block2 block15;
+        private Block2 block16;
+        private Block2 block17;
+        private Block2 block18;
+        private Block2 block19;
+        private Block2 block20;
+        private Block2 block21;
+        private Block2 block22;
+        private Block2 block23;
+        private Block2 block24;
+        private Block2 block25;
+        private Block2 block26;
+        private Block2 block27;
+        private Block2 block28;
+        private Block2 block29;
+        private Block2 block30;
+        private Block2 block31;
+        private Block2 block32;
+        private Block2 block33;
+        private Block2 block34;
+        private Block2 block35;
     }
 }
 
