@@ -381,5 +381,8 @@
   <ItemGroup>
     <None Include="Resources\cromball.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laeacco-Velhas-T-buas-De-Madeira-Pranchas-Textura-C-mera-Fotogr-fica-Backdrops-Para-Est-dio.jpg_640x640.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

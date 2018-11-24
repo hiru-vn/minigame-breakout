@@ -99,8 +99,6 @@ namespace minigame_breakout
         //Xu ly va cham voi player
         public void collision_Player(Player player)
         {
-            if (isCrom)
-                isCrom = false;
             if (Y > 0)
             {
                 if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + 20, player.Location.Y), new Size(player.Width - 40, 1))))
@@ -108,6 +106,7 @@ namespace minigame_breakout
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
+                    isCrom = false;
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
@@ -115,6 +114,7 @@ namespace minigame_breakout
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
+                    isCrom = false;
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
                 {
@@ -122,6 +122,7 @@ namespace minigame_breakout
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
+                    isCrom = false;
                 }
             }
         }

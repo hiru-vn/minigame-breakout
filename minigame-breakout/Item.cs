@@ -34,7 +34,7 @@ namespace minigame_breakout
         public void SetFunction()
         {
             int generator = rd.Next(16);
-            if (generator % 2 == 0 &&  generator < 17) function = 0;
+            if (generator % 2 == 0 &&  generator < 17) function = 8;
             else
             {
                 if (generator == 1 || generator == 17)

@@ -82,10 +82,19 @@ namespace minigame_breakout
         #endregion
 
         #region timerTickEvent
+        private void TimeLeft_Tick(object sender, EventArgs e)
+        {
+            int count = int.Parse(labelCount.Text);
+            count--;
+            if (count == 0) loseStage();
+            labelCount.Text = count.ToString();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             //cap nhat score
             labelScore.Text = "Score: " + score;
+            //cap nhat life
+            labelLife.Text = Player.Life + "x";
             //di chuyen player
             Player.move();
             //player va cham tuong
@@ -249,7 +258,10 @@ namespace minigame_breakout
         {
             this.timer1.Interval = 20;
             this.DoubleBuffered = true;
-            this.BackgroundImage = Properties.Resources.background1;
+            this.BackgroundImage = Properties.Resources.background2;
+            this.pictureBox1.BackColor = Color.Transparent;
+            this.labelLife.BackColor = Color.Transparent;
+            this.labelCount.BackColor = Color.Transparent;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             foreach (Control x in this.Controls)
             {
@@ -267,7 +279,8 @@ namespace minigame_breakout
         private void loseStage()
         {
             this.timer1.Enabled = false;
-            this.Controls.Clear();
+            this.TimeLeft.Enabled = false;
+            labelLife.Text = "0x";
             //if (MessageBox.Show("you lose! try again?", "lose", MessageBoxButtons.YesNo) == DialogResult.Yes)
             //{
             //    Application.Restart();
@@ -281,10 +294,11 @@ namespace minigame_breakout
         private void winStage()
         {
             this.timer1.Enabled = false;
-            this.Controls.Clear();
+            this.TimeLeft.Enabled = false;
             score = 0;
             MessageBox.Show("you win!");
         }
         #endregion
+
     }
 }
