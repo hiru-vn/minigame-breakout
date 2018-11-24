@@ -483,16 +483,6 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _61_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_61_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap background1 {
             get {
                 object obj = ResourceManager.GetObject("background1", resourceCulture);
@@ -666,6 +656,16 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap brickYellow_cracked {
             get {
                 object obj = ResourceManager.GetObject("brickYellow_cracked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bullet {
+            get {
+                object obj = ResourceManager.GetObject("bullet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

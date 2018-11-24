@@ -124,9 +124,12 @@ namespace minigame_breakout
                 //su kien khi player cham vao item
                 if (x is Item)
                 {
-                    (x as Item).move();
-                    int function = Player.collision_Item(x as Item);
-                    if (function!=0)
+                    Item temp = x as Item;
+                    temp.move();
+                    if (temp.FallOut(ClientSize.Height))
+                        this.Controls.Remove(x);
+                    int function = Player.collision_Item(temp);
+                    if (function != 0)
                     {
                         this.Controls.Remove(x);
                         if (function == 3)
@@ -143,7 +146,6 @@ namespace minigame_breakout
                         {
                             Ball.IsCrom = true;
                         }
-
                     }
                 }
                 //ball event

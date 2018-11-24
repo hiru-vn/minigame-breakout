@@ -45,7 +45,7 @@ namespace minigame_breakout
             this.BackgroundImage = Properties.Resources.player_1;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
-       
+
         public void BouncingMode()
         {
             if (image == 1)
@@ -84,10 +84,6 @@ namespace minigame_breakout
                     this.BackgroundImage = Properties.Resources.player_gunmode1;
                 }
             }
-            else
-            {
-                this.BackgroundImage = Properties.Resources.player_gunmode2;
-            }
         }
         //di chuyen
         public void move()
@@ -95,7 +91,8 @@ namespace minigame_breakout
             this.speed = 8;
             if (isSlowSpeed) this.speed = 5;
             if (isBuffSpeed) this.speed = 13;
-            if (isBouncing && !isShorten && !isLengthen) BouncingMode();
+            if (isBouncing && !isShorten && !isLengthen && !isGunMode) BouncingMode();
+            if (isGunMode) GunMode();
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }
@@ -120,7 +117,7 @@ namespace minigame_breakout
                 if (func == 0)
                 {
                     Random rnd = new Random();
-                    int generator = rnd.Next(7)+1;
+                    int generator = rnd.Next(7) + 1;
                     func = generator;
                 }
                 if (func == 1)
@@ -178,7 +175,7 @@ namespace minigame_breakout
                 else if (func == 7)
                 {
                     this.isGunMode = true;
-                    GunMode();                    
+                    this.BackgroundImage = Properties.Resources.player_gunmode2;
                 }
                 else if (func == 8)
                 {

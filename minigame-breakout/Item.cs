@@ -139,6 +139,12 @@ namespace minigame_breakout
                 Region = new Region(gp);
             }
         }
+        public bool FallOut(int Height)
+        {
+            if (this.Top > Height)
+                return true;
+            return false;
+        }
         #endregion
     }
 }

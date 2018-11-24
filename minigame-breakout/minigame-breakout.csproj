@@ -58,6 +58,12 @@
     <Compile Include="Block2.Designer.cs">
       <DependentUpon>Block2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bullet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Bullet.designer.cs">
+      <DependentUpon>Bullet.cs</DependentUpon>
+    </Compile>
     <Compile Include="constant.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
