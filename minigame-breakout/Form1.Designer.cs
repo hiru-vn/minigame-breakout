@@ -127,7 +127,6 @@
             // block31
             // 
             this.block31.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block31.BackgroundImage")));
             this.block31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block31.InitialImage = null;
             this.block31.Location = new System.Drawing.Point(752, 322);
@@ -140,7 +139,6 @@
             // block32
             // 
             this.block32.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block32.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block32.BackgroundImage")));
             this.block32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block32.Location = new System.Drawing.Point(564, 322);
             this.block32.Name = "block32";
@@ -152,7 +150,6 @@
             // block33
             // 
             this.block33.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block33.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block33.BackgroundImage")));
             this.block33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block33.Location = new System.Drawing.Point(380, 322);
             this.block33.Name = "block33";
@@ -164,7 +161,6 @@
             // block34
             // 
             this.block34.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block34.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block34.BackgroundImage")));
             this.block34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block34.Location = new System.Drawing.Point(206, 322);
             this.block34.Name = "block34";
@@ -176,7 +172,6 @@
             // block35
             // 
             this.block35.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block35.BackgroundImage")));
             this.block35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block35.Location = new System.Drawing.Point(34, 322);
             this.block35.Name = "block35";
@@ -188,7 +183,6 @@
             // block26
             // 
             this.block26.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block26.BackgroundImage")));
             this.block26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block26.InitialImage = null;
             this.block26.Location = new System.Drawing.Point(752, 274);
@@ -201,7 +195,6 @@
             // block27
             // 
             this.block27.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block27.BackgroundImage")));
             this.block27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block27.Location = new System.Drawing.Point(564, 274);
             this.block27.Name = "block27";
@@ -213,7 +206,6 @@
             // block28
             // 
             this.block28.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block28.BackgroundImage")));
             this.block28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block28.Location = new System.Drawing.Point(380, 274);
             this.block28.Name = "block28";
@@ -225,7 +217,6 @@
             // block29
             // 
             this.block29.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block29.BackgroundImage")));
             this.block29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block29.Location = new System.Drawing.Point(206, 274);
             this.block29.Name = "block29";
@@ -237,7 +228,6 @@
             // block30
             // 
             this.block30.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block30.BackgroundImage")));
             this.block30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block30.Location = new System.Drawing.Point(34, 274);
             this.block30.Name = "block30";
@@ -249,7 +239,6 @@
             // block21
             // 
             this.block21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block21.BackgroundImage")));
             this.block21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block21.InitialImage = null;
             this.block21.Location = new System.Drawing.Point(752, 224);
@@ -262,7 +251,6 @@
             // block22
             // 
             this.block22.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block22.BackgroundImage")));
             this.block22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block22.Location = new System.Drawing.Point(564, 224);
             this.block22.Name = "block22";
@@ -274,7 +262,6 @@
             // block23
             // 
             this.block23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block23.BackgroundImage")));
             this.block23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block23.Location = new System.Drawing.Point(380, 224);
             this.block23.Name = "block23";
@@ -286,7 +273,6 @@
             // block24
             // 
             this.block24.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block24.BackgroundImage")));
             this.block24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block24.Location = new System.Drawing.Point(206, 224);
             this.block24.Name = "block24";
@@ -298,7 +284,6 @@
             // block25
             // 
             this.block25.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block25.BackgroundImage")));
             this.block25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block25.Location = new System.Drawing.Point(34, 224);
             this.block25.Name = "block25";
@@ -310,7 +295,6 @@
             // block16
             // 
             this.block16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block16.BackgroundImage")));
             this.block16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block16.InitialImage = null;
             this.block16.Location = new System.Drawing.Point(752, 174);
@@ -323,7 +307,6 @@
             // block17
             // 
             this.block17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block17.BackgroundImage")));
             this.block17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block17.Location = new System.Drawing.Point(564, 174);
             this.block17.Name = "block17";
@@ -335,7 +318,6 @@
             // block18
             // 
             this.block18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block18.BackgroundImage")));
             this.block18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block18.Location = new System.Drawing.Point(380, 174);
             this.block18.Name = "block18";
@@ -347,7 +329,6 @@
             // block19
             // 
             this.block19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block19.BackgroundImage")));
             this.block19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block19.Location = new System.Drawing.Point(206, 174);
             this.block19.Name = "block19";
@@ -359,7 +340,6 @@
             // block20
             // 
             this.block20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block20.BackgroundImage")));
             this.block20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block20.Location = new System.Drawing.Point(34, 174);
             this.block20.Name = "block20";
@@ -371,7 +351,6 @@
             // block11
             // 
             this.block11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block11.BackgroundImage")));
             this.block11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block11.InitialImage = null;
             this.block11.Location = new System.Drawing.Point(752, 126);
@@ -384,7 +363,6 @@
             // block12
             // 
             this.block12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block12.BackgroundImage")));
             this.block12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block12.Location = new System.Drawing.Point(564, 126);
             this.block12.Name = "block12";
@@ -396,7 +374,6 @@
             // block13
             // 
             this.block13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block13.BackgroundImage")));
             this.block13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block13.Location = new System.Drawing.Point(380, 126);
             this.block13.Name = "block13";
@@ -408,7 +385,6 @@
             // block14
             // 
             this.block14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block14.BackgroundImage")));
             this.block14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block14.Location = new System.Drawing.Point(206, 126);
             this.block14.Name = "block14";
@@ -420,7 +396,6 @@
             // block15
             // 
             this.block15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block15.BackgroundImage")));
             this.block15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block15.Location = new System.Drawing.Point(34, 126);
             this.block15.Name = "block15";
@@ -432,7 +407,6 @@
             // block6
             // 
             this.block6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block6.BackgroundImage")));
             this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block6.InitialImage = null;
             this.block6.Location = new System.Drawing.Point(752, 80);
@@ -445,7 +419,6 @@
             // block7
             // 
             this.block7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block7.BackgroundImage")));
             this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block7.Location = new System.Drawing.Point(564, 80);
             this.block7.Name = "block7";
@@ -457,7 +430,6 @@
             // block8
             // 
             this.block8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block8.BackgroundImage")));
             this.block8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block8.Location = new System.Drawing.Point(380, 80);
             this.block8.Name = "block8";
@@ -469,7 +441,6 @@
             // block9
             // 
             this.block9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block9.BackgroundImage")));
             this.block9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block9.Location = new System.Drawing.Point(206, 80);
             this.block9.Name = "block9";
@@ -481,7 +452,6 @@
             // block10
             // 
             this.block10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block10.BackgroundImage")));
             this.block10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block10.Location = new System.Drawing.Point(34, 80);
             this.block10.Name = "block10";
@@ -493,7 +463,6 @@
             // block5
             // 
             this.block5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block5.BackgroundImage")));
             this.block5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block5.InitialImage = null;
             this.block5.Location = new System.Drawing.Point(752, 34);
@@ -506,7 +475,6 @@
             // block4
             // 
             this.block4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block4.BackgroundImage")));
             this.block4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block4.Location = new System.Drawing.Point(564, 34);
             this.block4.Name = "block4";
@@ -518,7 +486,6 @@
             // block3
             // 
             this.block3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block3.BackgroundImage")));
             this.block3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block3.Location = new System.Drawing.Point(380, 34);
             this.block3.Name = "block3";
@@ -530,7 +497,6 @@
             // block2
             // 
             this.block2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block2.BackgroundImage")));
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block2.Location = new System.Drawing.Point(206, 34);
             this.block2.Name = "block2";
@@ -542,7 +508,6 @@
             // block1
             // 
             this.block1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.block1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block1.BackgroundImage")));
             this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.block1.InitialImage = null;
             this.block1.Location = new System.Drawing.Point(34, 34);
@@ -574,11 +539,9 @@
             this.Player.GoLeft = false;
             this.Player.GoRight = false;
             this.Player.IsBouncing = false;
-            this.Player.IsBuffSpeed = false;
             this.Player.Location = new System.Drawing.Point(364, 704);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(131, 27);
-            this.Player.Speed = 5;
             this.Player.TabIndex = 38;
             this.Player.TabStop = false;
             // 

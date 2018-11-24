@@ -13,5 +13,8 @@ namespace minigame_breakout
         public const int ballHeight = 25;
         public const int playerHeight = 29;
         public const int playerWidth = 180;
+        public const int bulletHeigth = 30;
+        public const int bulletWidth = 15;
+
     }
 }

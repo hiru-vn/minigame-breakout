@@ -90,6 +90,25 @@ namespace minigame_breakout
             Player.move();
             //player va cham tuong
             Player.collision_Wall(ClientSize.Width);
+            //neu dang trong trang thai gunmode
+            if (Player.IsGunMode)
+            {
+                Bullet.tick();
+                if (Bullet.Shoot())
+                {
+                    Bullet bullet1 = new Bullet();
+                    Bullet bullet2 = new Bullet();
+                    bullet1.Location = new Point(Player.Location.X, Player.Location.Y - constant.bulletHeigth);
+                    bullet2.Location = new Point(Player.Location.X + Player.Width-constant.bulletWidth, Player.Location.Y - constant.bulletHeigth);
+                    this.Controls.Add(bullet1);
+                    this.Controls.Add(bullet2);
+                }
+                if (!Bullet.onGunMode)
+                {
+                    Player.IsGunMode = false;
+                    Player.GetImage();
+                }
+            }
             //su kien cua controls
             foreach (Control x in this.Controls)
             {
@@ -107,7 +126,6 @@ namespace minigame_breakout
                                 Item item = new Item();
                                 item.Location = new Point(x.Location.X + x.Width / 2, x.Location.Y + x.Height);
                                 this.Controls.Add(item);
-                                x.BackgroundImage = Properties.Resources.brickGreen;
                                 //using (Graphics g = this.CreateGraphics())
                                 //{
                                 //    string testString = "+1";
@@ -142,10 +160,8 @@ namespace minigame_breakout
                             //ball2.reverseY();
                             //this.Controls.Add(ball2);
                         }
-                        else if (function == 6)
-                        {
-                            Ball.IsCrom = true;
-                        }
+                        else if (function == 6) Ball.IsCrom = true;
+                        else if (function == 7) Bullet.StartGunMode();
                     }
                 }
                 //ball event
@@ -165,6 +181,24 @@ namespace minigame_breakout
                         if (ball.all_fall_out()) loseStage(); 
                     }
                 }
+                if (x is Bullet)
+                {
+                    Bullet temp = x as Bullet;
+                    temp.move();
+                    if (temp.ShotOut()) this.Controls.Remove(x);
+                    foreach (Control y in this.Controls)
+                    {
+                        if (y is Block2)
+                        {
+                            Block2 temp2 = y as Block2;
+                            if (temp.collision_Block(temp2))
+                            {
+                                if (temp2.getHit()) this.Controls.Remove(y);
+                                this.Controls.Remove(x);
+                            }
+                        }
+                    }
+                }
                 if (Block2.count < 1)
                     winStage();
             }
@@ -176,7 +210,7 @@ namespace minigame_breakout
         {
             this.timer1.Interval = 20;
             this.DoubleBuffered = true;
-            this.BackgroundImage = Properties.Resources.background2;
+            this.BackgroundImage = Properties.Resources.background1;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             foreach (Control x in this.Controls)
             {
@@ -209,6 +243,5 @@ namespace minigame_breakout
             MessageBox.Show("you win!");
         }
         #endregion
-
     }
 }

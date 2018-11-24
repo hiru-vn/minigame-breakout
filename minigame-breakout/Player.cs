@@ -34,8 +34,9 @@ namespace minigame_breakout
         public bool GoRight { get => goRight; set => goRight = value; }
         public bool GoLeft { get => goLeft; set => goLeft = value; }
         public int Speed { get => speed; set => speed = value; }
-        public bool IsBuffSpeed { get => isBuffSpeed; set => isBuffSpeed = value; }
+        public bool IsBuffSpeed { get => isBuffSpeed;}
         public bool IsBouncing { get => isBouncing; set => isBouncing = value; }
+        public bool IsGunMode { get => isGunMode; set => isGunMode = value; }
         #endregion
 
         #region functions
@@ -91,8 +92,8 @@ namespace minigame_breakout
             this.speed = 8;
             if (isSlowSpeed) this.speed = 5;
             if (isBuffSpeed) this.speed = 13;
-            if (isBouncing && !isShorten && !isLengthen && !isGunMode) BouncingMode();
-            if (isGunMode) GunMode();
+            if (isBouncing && !isShorten && !isLengthen && !IsGunMode) BouncingMode();
+            if (IsGunMode) GunMode();
             if (this.GoLeft) { this.Left -= this.speed; }
             else if (this.GoRight) { this.Left += this.speed; }
         }
@@ -174,7 +175,7 @@ namespace minigame_breakout
                 }
                 else if (func == 7)
                 {
-                    this.isGunMode = true;
+                    this.IsGunMode = true;
                     this.BackgroundImage = Properties.Resources.player_gunmode2;
                 }
                 else if (func == 8)
