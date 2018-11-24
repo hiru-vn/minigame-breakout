@@ -10,25 +10,16 @@ using System.Windows.Forms;
 
 namespace minigame_breakout
 {
-    public partial class Block2 : PictureBox
+    public partial class Block2 : Block
     {
         #region properties
-        public static int count=0;
         private int skin = 0;
         private bool iscracked = false;
-        private bool containItems = false;
-        private static Random rndItem = new Random();
         public Block2()
         {
             InitializeComponent();
-            count++;
-            int gen = rndItem.Next(5);
-            if (gen == 0)
-                containItems = true;
         }
 
-        public int Skin { get => skin; set => skin = value; }
-        public bool ContainItems { get => containItems; }
         #endregion
 
         #region functions
@@ -68,7 +59,6 @@ namespace minigame_breakout
                 count--;
                 return true;
             }
-
         }
         #endregion
     }

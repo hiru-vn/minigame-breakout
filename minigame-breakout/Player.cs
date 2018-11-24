@@ -24,6 +24,7 @@ namespace minigame_breakout
         private bool isLengthen = false;
         private bool isGunMode = false;
         private int image = 1;
+        private int life = 3;
 
         public Player()
         {
@@ -37,6 +38,7 @@ namespace minigame_breakout
         public bool IsBuffSpeed { get => isBuffSpeed;}
         public bool IsBouncing { get => isBouncing; set => isBouncing = value; }
         public bool IsGunMode { get => isGunMode; set => isGunMode = value; }
+        public int Life { get => life; }
         #endregion
 
         #region functions
@@ -180,11 +182,17 @@ namespace minigame_breakout
                 }
                 else if (func == 8)
                 {
-                    //heart++
+                    life++;
                 }
                 return func;
             }
             return 0;
+        }
+        public bool lostLife()
+        {
+            life--;
+            if (life > 0) return false;
+            return true;
         }
         #endregion
     }

@@ -52,11 +52,29 @@
     <Compile Include="Ball.Designer.cs">
       <DependentUpon>Ball.cs</DependentUpon>
     </Compile>
+    <Compile Include="Block.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Block1.Designer.cs">
+      <DependentUpon>Block1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Block2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Block2.Designer.cs">
       <DependentUpon>Block2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Block3.Designer.cs">
+      <DependentUpon>Block3.cs</DependentUpon>
     </Compile>
     <Compile Include="Bullet.cs">
       <SubType>Component</SubType>
@@ -65,11 +83,11 @@
       <DependentUpon>Bullet.cs</DependentUpon>
     </Compile>
     <Compile Include="constant.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs">
       <SubType>Component</SubType>
@@ -88,8 +106,8 @@
     <Compile Include="MyButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>

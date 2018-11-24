@@ -43,7 +43,7 @@ namespace minigame_breakout
         {
             onGunMode = true;
         }
-        public bool collision_Block(Block2 block)
+        public bool collision_Block(Block block)
         {
             if (this.Bounds.IntersectsWith(block.Bounds)) return true;
             return false;

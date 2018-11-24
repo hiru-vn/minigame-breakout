@@ -99,6 +99,8 @@ namespace minigame_breakout
         //Xu ly va cham voi player
         public void collision_Player(Player player)
         {
+            if (isCrom)
+                isCrom = false;
             if (Y > 0)
             {
                 if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + 20, player.Location.Y), new Size(player.Width - 40, 1))))
@@ -124,7 +126,7 @@ namespace minigame_breakout
             }
         }
         //Xu ly va cham voi block
-        public bool collision_Block(Block2 block)
+        public bool collision_Block(Block block)
         {
             if (this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X,block.Location.Y), new Size(1, block.Height))))
             {
@@ -206,6 +208,7 @@ namespace minigame_breakout
         }
         public void setSkin()
         {
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             if (skin == 0) this.BackgroundImage = Properties.Resources.ball0;
             else if (skin == 1) this.BackgroundImage = Properties.Resources.ball1;
             else if (skin == 2) this.BackgroundImage = Properties.Resources.ball2;

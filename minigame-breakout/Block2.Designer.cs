@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            this.Size = new System.Drawing.Size(125, 25);
         }
 
         #endregion
