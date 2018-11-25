@@ -147,7 +147,7 @@
             this.labelScore.Font = new System.Drawing.Font("Showcard Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore.Location = new System.Drawing.Point(12, 9);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(99, 29);
+            this.labelScore.Size = new System.Drawing.Size(92, 28);
             this.labelScore.TabIndex = 37;
             this.labelScore.Text = "Score:";
             // 
@@ -751,7 +751,6 @@
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseIsDown);

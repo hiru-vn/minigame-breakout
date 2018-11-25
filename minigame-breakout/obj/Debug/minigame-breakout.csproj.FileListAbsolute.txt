@@ -11,7 +11,6 @@ C:\Users\DELL\Desktop\minigame-breakout\minigame-breakout\obj\Debug\minigame-bre
 D:\myprojects\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.exe.config
 D:\myprojects\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.exe
 D:\myprojects\minigame-breakout\minigame-breakout\bin\Debug\minigame-breakout.pdb
-D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csprojAssemblyReference.cache
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.Properties.Resources.resources
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csproj.GenerateResource.cache
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csproj.CoreCompileInputs.cache
@@ -30,3 +29,5 @@ C:\Users\DELL\Desktop\New folder\minigame-breakout-master\minigame-breakout\obj\
 C:\Users\DELL\Desktop\New folder\minigame-breakout-master\minigame-breakout\obj\Debug\minigame-breakout.exe
 C:\Users\DELL\Desktop\New folder\minigame-breakout-master\minigame-breakout\obj\Debug\minigame-breakout.pdb
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.FormMain.resources
+D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.FormPvP.resources
+D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csprojAssemblyReference.cache

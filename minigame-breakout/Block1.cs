@@ -12,11 +12,15 @@ namespace minigame_breakout
 {
     public partial class Block1 : Block
     {
+        #region properties
         private int skin = 0;
         public Block1()
         {
             InitializeComponent();
         }
+        #endregion
+
+        #region function
         public void setSkin()
         {
             this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -34,5 +38,6 @@ namespace minigame_breakout
             count--;
             return true;
         }
+        #endregion
     }
 }

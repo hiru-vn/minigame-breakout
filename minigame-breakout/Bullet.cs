@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace minigame_breakout
 {
     public partial class Bullet : PictureBox
-    { 
+    {
+        #region properties
         public static Timer timer;
         public static int timeEffect = 300;
         public static bool onGunMode = false;
@@ -20,6 +21,9 @@ namespace minigame_breakout
             InitializeComponent();
             BackgroundImageLayout = ImageLayout.Stretch;
         }
+        #endregion
+
+        #region function
         public void move() { this.Top -= 7; }
         public bool ShotOut()
         {
@@ -53,5 +57,6 @@ namespace minigame_breakout
             if (timeEffect % 25 == 0) return true;
             return false;
         }
+        #endregion
     }
 }

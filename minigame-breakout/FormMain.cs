@@ -242,7 +242,7 @@ namespace minigame_breakout
                             }
                             else
                             {
-                                this.Controls.Remove(x);
+                                //this.Controls.Remove(x);
                                 Ball otherBall = new Ball();
                                 otherBall.Size = new System.Drawing.Size(22, 22);
                                 otherBall.reverseY();

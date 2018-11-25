@@ -1,6 +1,6 @@
 ﻿namespace minigame_breakout
 {
-    partial class Player
+    partial class Player2
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Player
-            // 
-            this.Name = "Player";
-            this.ResumeLayout(false);
+            components = new System.ComponentModel.Container();
             this.Size = new System.Drawing.Size(131, 27);
             this.BackColor = System.Drawing.Color.Transparent;
-
         }
 
         #endregion
