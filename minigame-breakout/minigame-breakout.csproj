@@ -384,5 +384,11 @@
   <ItemGroup>
     <None Include="Resources\Laeacco-Velhas-T-buas-De-Madeira-Pranchas-Textura-C-mera-Fotogr-fica-Backdrops-Para-Est-dio.jpg_640x640.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal_Project_pause-queue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play1Hot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,6 +23,35 @@ namespace minigame_breakout
         #endregion
 
         #region key_mouse_events
+        private void Pause(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            TimeLeft.Stop();
+        }
+        private void Resume(object sender, EventArgs e)
+        {
+            timer1.Start();
+            TimeLeft.Start();
+        }
+        private void PauseButton_Click(object sender, EventArgs e)
+        {
+            if (PauseButton.Tag != null)
+            {
+                if (PauseButton.Tag.ToString() == "pause")
+                {
+                    PauseButton.BackgroundImage = Properties.Resources.resume;
+                    PauseButton.Tag = "resume";
+                    Pause(sender, e);
+                }
+                else if (PauseButton.Tag.ToString() == "resume")
+                {
+                    PauseButton.BackgroundImage = Properties.Resources.pause;
+                    PauseButton.Tag = "pause";
+                    Resume(sender, e);
+                }
+            }
+
+        }
         private void keyisdown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == Keys.Left || e.KeyCode == Keys.A) && this.Player.Left > 0)
@@ -86,8 +115,9 @@ namespace minigame_breakout
         {
             int count = int.Parse(labelCount.Text);
             count--;
-            if (count == 0) loseStage();
             labelCount.Text = count.ToString();
+            if (count == 10) labelCount.ForeColor = Color.Red;
+            if (count == 0) loseStage();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -184,7 +214,6 @@ namespace minigame_breakout
                             //ball2.reverseY();
                             //this.Controls.Add(ball2);
                         }
-                        else if (function == 6) Ball.IsCrom = true;
                         else if (function == 7) Bullet.StartGunMode();
                     }
                 }
@@ -198,6 +227,8 @@ namespace minigame_breakout
                     temp.collision_Wall(ClientSize.Width);
                     //xu ly banh va cham voi player
                     temp.collision_Player(Player);
+                    //cap nhat ball speed
+                    labelSpeed.Text = "Ball speed: " + (float)(Math.Round(Ball.Speed, 2));
                     //banh roi ra ngoai
                     if (temp.fall_Out(ClientSize.Height))
                     {
@@ -205,7 +236,10 @@ namespace minigame_breakout
                         if (temp.all_fall_out())
                         {
                             if (Player.lostLife())
+                            {
                                 loseStage();
+                                labelLife.Text = "0x";
+                            }
                             else
                             {
                                 this.Controls.Remove(x);
@@ -263,6 +297,9 @@ namespace minigame_breakout
             this.labelLife.BackColor = Color.Transparent;
             this.labelCount.BackColor = Color.Transparent;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.labelScore.BackColor = Color.Transparent;
+            this.PauseButton.BackColor = Color.Transparent;
+            this.labelSpeed.BackColor = Color.Transparent;
             foreach (Control x in this.Controls)
             {
                 if (x is Block2)
@@ -275,12 +312,13 @@ namespace minigame_breakout
                 }
             }
             this.KeyPreview = true;
+            this.LostFocus += new System.EventHandler(Pause);
+            this.GotFocus += new System.EventHandler(Resume);
         }
         private void loseStage()
         {
             this.timer1.Enabled = false;
             this.TimeLeft.Enabled = false;
-            labelLife.Text = "0x";
             //if (MessageBox.Show("you lose! try again?", "lose", MessageBoxButtons.YesNo) == DialogResult.Yes)
             //{
             //    Application.Restart();

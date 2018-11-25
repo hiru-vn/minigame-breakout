@@ -13,14 +13,14 @@ namespace minigame_breakout
     public partial class Bullet : PictureBox
     { 
         public static Timer timer;
-        public static int timeEffect = 500;
+        public static int timeEffect = 300;
         public static bool onGunMode = false;
         public Bullet()
         {
             InitializeComponent();
             BackgroundImageLayout = ImageLayout.Stretch;
         }
-        public void move() { this.Top -= 6; }
+        public void move() { this.Top -= 7; }
         public bool ShotOut()
         {
             if (this.Top < 0)
@@ -34,7 +34,7 @@ namespace minigame_breakout
                 if (timeEffect > 0) timeEffect--;
                 if (timeEffect == 0)
                 {
-                    timeEffect = 500;
+                    timeEffect = 300;
                     onGunMode = false;
                 }
             }
@@ -50,7 +50,7 @@ namespace minigame_breakout
         }
         public static bool Shoot()
         {
-            if (timeEffect % 50 == 0) return true;
+            if (timeEffect % 25 == 0) return true;
             return false;
         }
     }

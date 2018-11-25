@@ -14,17 +14,18 @@ namespace minigame_breakout
     public partial class Player : PictureBox
     {
         #region properties
-        private int speed = 10;
-        private bool goLeft = false;
-        private bool goRight = false;
-        private bool isBuffSpeed = false;
-        private bool isSlowSpeed = false;
-        private bool isBouncing = false;
-        private bool isShorten = false;
-        private bool isLengthen = false;
-        private bool isGunMode = false;
-        private int image = 1;
-        private int life = 3;
+        protected int speed = 10;
+        protected bool goLeft = false;
+        protected bool goRight = false;
+        protected bool isBuffSpeed = false;
+        protected bool isSlowSpeed = false;
+        protected bool isBouncing = false;
+        protected bool isShorten = false;
+        protected bool isLengthen = false;
+        protected bool isGunMode = false;
+        protected int image = 1;
+        protected int life = 3;
+        protected bool passCrom = false;
 
         public Player()
         {
@@ -39,6 +40,7 @@ namespace minigame_breakout
         public bool IsBouncing { get => isBouncing; set => isBouncing = value; }
         public bool IsGunMode { get => isGunMode; set => isGunMode = value; }
         public int Life { get => life; }
+        public bool PassCrom { get => passCrom; set => passCrom = value; }
         #endregion
 
         #region functions
@@ -173,7 +175,7 @@ namespace minigame_breakout
                 }
                 else if (func == 6)
                 {
-                    //toball
+                    this.PassCrom = true;
                 }
                 else if (func == 7)
                 {

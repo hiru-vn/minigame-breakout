@@ -22,6 +22,7 @@ namespace minigame_breakout
         private int skin = 3;
         private bool isCrom = false;
         private static int countBall=0;
+        private float speed = (float)7.07;
 
         public Ball()
         {
@@ -47,6 +48,7 @@ namespace minigame_breakout
         public int Y { get => y; set => y = value; }
         public int Skin { get => skin; set => skin = value; }
         public bool IsCrom { get => isCrom; set => isCrom = value; }
+        public float Speed { get => speed; }
         #endregion
 
         #region design
@@ -106,23 +108,52 @@ namespace minigame_breakout
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
-                    isCrom = false;
+                    if (player.PassCrom && isCrom)
+                    {
+                        player.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (player.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
                     this.x -= 2;
+                    //this.y += 1;
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
-                    isCrom = false;
+                    if (player.PassCrom && isCrom)
+                    {
+                        player.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (player.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
                 {
                     this.x += 2;
+                    //this.y += 1;
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
-                    isCrom = false;
+                    if (player.PassCrom && isCrom)
+                    {
+                        player.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (player.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
                 }
             }
         }
@@ -217,6 +248,10 @@ namespace minigame_breakout
             else if (skin == 4) this.BackgroundImage = Properties.Resources.ball4;
             else if (skin == 5) this.BackgroundImage = Properties.Resources.ball5;
             else if (skin == 6) this.BackgroundImage = Properties.Resources.ball6;
+        }
+        public void setSpeed()
+        {
+            speed = (float) Math.Sqrt(x * x + y * y);
         }
         #endregion
     }

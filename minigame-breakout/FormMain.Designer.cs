@@ -32,10 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.labelScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelLife = new System.Windows.Forms.Label();
             this.labelCount = new System.Windows.Forms.Label();
             this.TimeLeft = new System.Windows.Forms.Timer(this.components);
+            this.PauseButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.block128 = new minigame_breakout.Block1();
+            this.block127 = new minigame_breakout.Block1();
+            this.block126 = new minigame_breakout.Block1();
+            this.block125 = new minigame_breakout.Block1();
+            this.block124 = new minigame_breakout.Block1();
+            this.block123 = new minigame_breakout.Block1();
+            this.block122 = new minigame_breakout.Block1();
+            this.block121 = new minigame_breakout.Block1();
+            this.block120 = new minigame_breakout.Block1();
+            this.block119 = new minigame_breakout.Block1();
             this.block112 = new minigame_breakout.Block1();
             this.block110 = new minigame_breakout.Block1();
             this.block118 = new minigame_breakout.Block1();
@@ -75,17 +86,19 @@
             this.block2 = new minigame_breakout.Block2();
             this.Ball = new minigame_breakout.Ball();
             this.Player = new minigame_breakout.Player();
-            this.block119 = new minigame_breakout.Block1();
-            this.block120 = new minigame_breakout.Block1();
-            this.block121 = new minigame_breakout.Block1();
-            this.block122 = new minigame_breakout.Block1();
-            this.block123 = new minigame_breakout.Block1();
-            this.block124 = new minigame_breakout.Block1();
-            this.block125 = new minigame_breakout.Block1();
-            this.block126 = new minigame_breakout.Block1();
-            this.block127 = new minigame_breakout.Block1();
-            this.block128 = new minigame_breakout.Block1();
+            this.labelSpeed = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block128)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block127)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block126)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block125)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block124)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block123)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block122)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block121)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block120)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block119)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block118)).BeginInit();
@@ -125,25 +138,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block119)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block121)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block122)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block123)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block124)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block125)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block126)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block127)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block128)).BeginInit();
             this.SuspendLayout();
             // 
             // labelScore
             // 
+            this.labelScore.AutoSize = true;
             this.labelScore.BackColor = System.Drawing.SystemColors.Highlight;
-            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore.Location = new System.Drawing.Point(0, 0);
+            this.labelScore.Font = new System.Drawing.Font("Showcard Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.Location = new System.Drawing.Point(12, 9);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(94, 27);
+            this.labelScore.Size = new System.Drawing.Size(99, 29);
             this.labelScore.TabIndex = 37;
             this.labelScore.Text = "Score:";
             // 
@@ -152,16 +156,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::minigame_breakout.Properties.Resources.function_heart;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(865, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
             // 
             // labelLife
             // 
@@ -182,7 +176,7 @@
             this.labelCount.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCount.Location = new System.Drawing.Point(422, 0);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(63, 33);
+            this.labelCount.Size = new System.Drawing.Size(64, 34);
             this.labelCount.TabIndex = 89;
             this.labelCount.Text = "100";
             // 
@@ -192,9 +186,111 @@
             this.TimeLeft.Interval = 1000;
             this.TimeLeft.Tick += new System.EventHandler(this.TimeLeft_Tick);
             // 
+            // PauseButton
+            // 
+            this.PauseButton.BackgroundImage = global::minigame_breakout.Properties.Resources.pause;
+            this.PauseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PauseButton.Location = new System.Drawing.Point(865, 765);
+            this.PauseButton.Name = "PauseButton";
+            this.PauseButton.Size = new System.Drawing.Size(41, 39);
+            this.PauseButton.TabIndex = 100;
+            this.PauseButton.TabStop = false;
+            this.PauseButton.Tag = "pause";
+            this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::minigame_breakout.Properties.Resources.function_heart;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(865, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
+            // 
+            // block128
+            // 
+            this.block128.Location = new System.Drawing.Point(818, 205);
+            this.block128.Name = "block128";
+            this.block128.Size = new System.Drawing.Size(60, 60);
+            this.block128.TabIndex = 99;
+            this.block128.TabStop = false;
+            // 
+            // block127
+            // 
+            this.block127.Location = new System.Drawing.Point(752, 205);
+            this.block127.Name = "block127";
+            this.block127.Size = new System.Drawing.Size(60, 60);
+            this.block127.TabIndex = 98;
+            this.block127.TabStop = false;
+            // 
+            // block126
+            // 
+            this.block126.Location = new System.Drawing.Point(630, 205);
+            this.block126.Name = "block126";
+            this.block126.Size = new System.Drawing.Size(60, 60);
+            this.block126.TabIndex = 97;
+            this.block126.TabStop = false;
+            // 
+            // block125
+            // 
+            this.block125.Location = new System.Drawing.Point(564, 205);
+            this.block125.Name = "block125";
+            this.block125.Size = new System.Drawing.Size(60, 60);
+            this.block125.TabIndex = 96;
+            this.block125.TabStop = false;
+            // 
+            // block124
+            // 
+            this.block124.Location = new System.Drawing.Point(100, 205);
+            this.block124.Name = "block124";
+            this.block124.Size = new System.Drawing.Size(60, 60);
+            this.block124.TabIndex = 95;
+            this.block124.TabStop = false;
+            // 
+            // block123
+            // 
+            this.block123.Location = new System.Drawing.Point(272, 208);
+            this.block123.Name = "block123";
+            this.block123.Size = new System.Drawing.Size(60, 60);
+            this.block123.TabIndex = 94;
+            this.block123.TabStop = false;
+            // 
+            // block122
+            // 
+            this.block122.Location = new System.Drawing.Point(446, 208);
+            this.block122.Name = "block122";
+            this.block122.Size = new System.Drawing.Size(60, 60);
+            this.block122.TabIndex = 93;
+            this.block122.TabStop = false;
+            // 
+            // block121
+            // 
+            this.block121.Location = new System.Drawing.Point(380, 208);
+            this.block121.Name = "block121";
+            this.block121.Size = new System.Drawing.Size(60, 60);
+            this.block121.TabIndex = 92;
+            this.block121.TabStop = false;
+            // 
+            // block120
+            // 
+            this.block120.Location = new System.Drawing.Point(206, 208);
+            this.block120.Name = "block120";
+            this.block120.Size = new System.Drawing.Size(60, 60);
+            this.block120.TabIndex = 91;
+            this.block120.TabStop = false;
+            // 
+            // block119
+            // 
+            this.block119.Location = new System.Drawing.Point(34, 205);
+            this.block119.Name = "block119";
+            this.block119.Size = new System.Drawing.Size(60, 60);
+            this.block119.TabIndex = 90;
+            this.block119.TabStop = false;
+            // 
             // block112
             // 
-            this.block112.Location = new System.Drawing.Point(99, 12);
+            this.block112.Location = new System.Drawing.Point(236, 439);
             this.block112.Name = "block112";
             this.block112.Size = new System.Drawing.Size(60, 60);
             this.block112.TabIndex = 88;
@@ -202,7 +298,7 @@
             // 
             // block110
             // 
-            this.block110.Location = new System.Drawing.Point(749, 12);
+            this.block110.Location = new System.Drawing.Point(629, 439);
             this.block110.Name = "block110";
             this.block110.Size = new System.Drawing.Size(60, 60);
             this.block110.TabIndex = 87;
@@ -523,7 +619,7 @@
             // 
             this.block4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.block4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.block4.Location = new System.Drawing.Point(564, 34);
+            this.block4.Location = new System.Drawing.Point(35, 456);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(125, 25);
             this.block4.TabIndex = 43;
@@ -533,7 +629,7 @@
             // 
             this.block3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.block3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.block3.Location = new System.Drawing.Point(380, 34);
+            this.block3.Location = new System.Drawing.Point(753, 456);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(125, 25);
             this.block3.TabIndex = 42;
@@ -543,7 +639,7 @@
             // 
             this.block2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.block2.Location = new System.Drawing.Point(206, 34);
+            this.block2.Location = new System.Drawing.Point(380, 456);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(125, 25);
             this.block2.TabIndex = 41;
@@ -554,7 +650,7 @@
             this.Ball.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ball.BackgroundImage")));
             this.Ball.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ball.IsCrom = false;
-            this.Ball.Location = new System.Drawing.Point(428, 471);
+            this.Ball.Location = new System.Drawing.Point(412, 718);
             this.Ball.Name = "Ball";
             this.Ball.Size = new System.Drawing.Size(28, 28);
             this.Ball.Skin = 3;
@@ -572,99 +668,32 @@
             this.Player.GoRight = false;
             this.Player.IsBouncing = false;
             this.Player.IsGunMode = false;
-            this.Player.Location = new System.Drawing.Point(364, 704);
+            this.Player.Location = new System.Drawing.Point(364, 752);
             this.Player.Name = "Player";
+            this.Player.PassCrom = false;
             this.Player.Size = new System.Drawing.Size(131, 27);
             this.Player.Speed = 10;
             this.Player.TabIndex = 38;
             this.Player.TabStop = false;
             // 
-            // block119
+            // labelSpeed
             // 
-            this.block119.Location = new System.Drawing.Point(34, 205);
-            this.block119.Name = "block119";
-            this.block119.Size = new System.Drawing.Size(60, 60);
-            this.block119.TabIndex = 90;
-            this.block119.TabStop = false;
-            // 
-            // block120
-            // 
-            this.block120.Location = new System.Drawing.Point(206, 208);
-            this.block120.Name = "block120";
-            this.block120.Size = new System.Drawing.Size(60, 60);
-            this.block120.TabIndex = 91;
-            this.block120.TabStop = false;
-            // 
-            // block121
-            // 
-            this.block121.Location = new System.Drawing.Point(380, 208);
-            this.block121.Name = "block121";
-            this.block121.Size = new System.Drawing.Size(60, 60);
-            this.block121.TabIndex = 92;
-            this.block121.TabStop = false;
-            // 
-            // block122
-            // 
-            this.block122.Location = new System.Drawing.Point(446, 208);
-            this.block122.Name = "block122";
-            this.block122.Size = new System.Drawing.Size(60, 60);
-            this.block122.TabIndex = 93;
-            this.block122.TabStop = false;
-            // 
-            // block123
-            // 
-            this.block123.Location = new System.Drawing.Point(272, 208);
-            this.block123.Name = "block123";
-            this.block123.Size = new System.Drawing.Size(60, 60);
-            this.block123.TabIndex = 94;
-            this.block123.TabStop = false;
-            // 
-            // block124
-            // 
-            this.block124.Location = new System.Drawing.Point(100, 205);
-            this.block124.Name = "block124";
-            this.block124.Size = new System.Drawing.Size(60, 60);
-            this.block124.TabIndex = 95;
-            this.block124.TabStop = false;
-            // 
-            // block125
-            // 
-            this.block125.Location = new System.Drawing.Point(564, 205);
-            this.block125.Name = "block125";
-            this.block125.Size = new System.Drawing.Size(60, 60);
-            this.block125.TabIndex = 96;
-            this.block125.TabStop = false;
-            // 
-            // block126
-            // 
-            this.block126.Location = new System.Drawing.Point(630, 205);
-            this.block126.Name = "block126";
-            this.block126.Size = new System.Drawing.Size(60, 60);
-            this.block126.TabIndex = 97;
-            this.block126.TabStop = false;
-            // 
-            // block127
-            // 
-            this.block127.Location = new System.Drawing.Point(752, 205);
-            this.block127.Name = "block127";
-            this.block127.Size = new System.Drawing.Size(60, 60);
-            this.block127.TabIndex = 98;
-            this.block127.TabStop = false;
-            // 
-            // block128
-            // 
-            this.block128.Location = new System.Drawing.Point(818, 205);
-            this.block128.Name = "block128";
-            this.block128.Size = new System.Drawing.Size(60, 60);
-            this.block128.TabIndex = 99;
-            this.block128.TabStop = false;
+            this.labelSpeed.AutoSize = true;
+            this.labelSpeed.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.Location = new System.Drawing.Point(0, 780);
+            this.labelSpeed.Name = "labelSpeed";
+            this.labelSpeed.Size = new System.Drawing.Size(122, 24);
+            this.labelSpeed.TabIndex = 101;
+            this.labelSpeed.Text = "Ball speed: ";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(907, 762);
+            this.ClientSize = new System.Drawing.Size(907, 807);
+            this.Controls.Add(this.labelSpeed);
+            this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.block128);
             this.Controls.Add(this.block127);
             this.Controls.Add(this.block126);
@@ -728,7 +757,18 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseIsDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseIsMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseIsUp);
+            ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block128)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block127)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block126)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block125)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block124)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block123)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block122)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block121)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block120)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block119)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block118)).EndInit();
@@ -768,16 +808,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block119)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block121)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block122)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block123)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block124)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block125)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block126)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block127)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block128)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -839,6 +869,8 @@
         private Block1 block126;
         private Block1 block127;
         private Block1 block128;
+        private System.Windows.Forms.PictureBox PauseButton;
+        private System.Windows.Forms.Label labelSpeed;
     }
 }
 
