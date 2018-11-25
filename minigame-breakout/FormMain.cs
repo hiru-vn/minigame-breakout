@@ -281,9 +281,10 @@ namespace minigame_breakout
                         }
                     }
                 }
-                if (Block2.count < 1)
-                    winStage();
             }
+            //all block remove
+            if (Block2.count < 1)
+                winStage();
         }
         #endregion
 
@@ -319,6 +320,8 @@ namespace minigame_breakout
         {
             this.timer1.Enabled = false;
             this.TimeLeft.Enabled = false;
+            this.LostFocus -= new System.EventHandler(Pause);
+            this.GotFocus -= new System.EventHandler(Resume);
             //if (MessageBox.Show("you lose! try again?", "lose", MessageBoxButtons.YesNo) == DialogResult.Yes)
             //{
             //    Application.Restart();
@@ -331,6 +334,8 @@ namespace minigame_breakout
         }
         private void winStage()
         {
+            this.LostFocus -= new System.EventHandler(Pause);
+            this.GotFocus -= new System.EventHandler(Resume);
             this.timer1.Enabled = false;
             this.TimeLeft.Enabled = false;
             score = 0;
