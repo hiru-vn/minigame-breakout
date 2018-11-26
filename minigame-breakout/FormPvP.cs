@@ -23,32 +23,29 @@ namespace minigame_breakout
         #region key_mouse_events
         private void Pause(object sender, EventArgs e)
         {
-            //timer1.Stop();
-            //TimeLeft.Stop();
+            stopTimer();
         }
         private void Resume(object sender, EventArgs e)
         {
-            //timer1.Start();
-            //TimeLeft.Start();
+            startTimer();
         }
         private void PauseButton_Click(object sender, EventArgs e)
         {
-            //if (PauseButton.Tag != null)
-            //{
-            //    if (PauseButton.Tag.ToString() == "pause")
-            //    {
-            //        PauseButton.BackgroundImage = Properties.Resources.resume;
-            //        PauseButton.Tag = "resume";
-            //        Pause(sender, e);
-            //    }
-            //    else if (PauseButton.Tag.ToString() == "resume")
-            //    {
-            //        PauseButton.BackgroundImage = Properties.Resources.pause;
-            //        PauseButton.Tag = "pause";
-            //        Resume(sender, e);
-            //    }
-            //}
-
+            if (PauseButton.Tag != null)
+            {
+                if (PauseButton.Tag.ToString() == "pause")
+                {
+                    PauseButton.BackgroundImage = Properties.Resources.resume;
+                    PauseButton.Tag = "resume";
+                    Pause(sender, e);
+                }
+                else if (PauseButton.Tag.ToString() == "resume")
+                {
+                    PauseButton.BackgroundImage = Properties.Resources.pause;
+                    PauseButton.Tag = "pause";
+                    Resume(sender, e);
+                }
+            }
         }
 
         private void FormPvP_KeyDown(object sender, KeyEventArgs e)
@@ -151,6 +148,16 @@ namespace minigame_breakout
                     this.Controls.Add(otherBall);
                 }
             }
+            //colision_block
+            ball.collision_Block(block31 as Block);
+            ball.collision_Block(block33 as Block);
+            ball.collision_Block(block32 as Block);
+            block32.move(block31 as Block, ClientSize.Width);
+            block32.move(block33 as Block, ClientSize.Width);
+            block31.move(block32 as Block, ClientSize.Width);
+            block31.move(block33 as Block, ClientSize.Width);
+            block33.move(block31 as Block, ClientSize.Width);
+            block33.move(block32 as Block, ClientSize.Width);
         }
         private void timerPlayer1_Tick(object sender, EventArgs e)
         {
@@ -175,17 +182,25 @@ namespace minigame_breakout
             pictureBox1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
             labelSpeed.BackColor = Color.Transparent;
+            PauseButton.BackColor = Color.Transparent;
+
+            this.GotFocus += new EventHandler(Resume);
+            this.LostFocus += new EventHandler(Pause);
         }
         private void player1LoseStage()
         {
-            labelLife1.Text = "0x";
             disabledTimer();
+            this.LostFocus -= new System.EventHandler(Pause);
+            this.GotFocus -= new System.EventHandler(Resume);
+            labelLife1.Text = "0x";
             MessageBox.Show("player 2 win");
         }
         private void player2LoseStage()
         {
-            labelLife2.Text = "0x";
             disabledTimer();
+            this.LostFocus -= new System.EventHandler(Pause);
+            this.GotFocus -= new System.EventHandler(Resume);
+            labelLife2.Text = "0x";
             MessageBox.Show("player 1 win");
         }
         private void disabledTimer()
@@ -209,6 +224,7 @@ namespace minigame_breakout
         private void updateBallSpeed()
         {
             if (ball.Speed > 11) labelSpeed.ForeColor = Color.Red;
+            else labelSpeed.ForeColor = Color.Black;
             labelSpeed.Text = "Ball speed: " + (float)(Math.Round(ball.Speed, 2));
         }
         #endregion

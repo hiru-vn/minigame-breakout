@@ -12,54 +12,37 @@ namespace minigame_breakout
 {
     public partial class Block3 : Block
     {
+        private int X = 2;
         #region properties
-        private int skin = 0;
-        private bool iscracked = false;
         public Block3()
         {
             InitializeComponent();
+            setSkin();
         }
 
-        public int Skin { get => skin; set => skin = value; }
         #endregion
 
         #region functions
-        public void setSkin()
+        private void setSkin()
         {
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-            if (skin == 0)
-                this.BackgroundImage = Properties.Resources.brickGreen;
-            else if (skin == 1)
-                this.BackgroundImage = Properties.Resources.brickBlue;
-            else if (skin == 2)
-                this.BackgroundImage = Properties.Resources.brickYellow;
-            else if (skin == 3)
-                this.BackgroundImage = Properties.Resources.brickRed;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Transparent;
         }
-        public void setCrackedSkin()
+        public void move(Block block, int clienSizeWidth)
         {
-            if (skin == 0)
-                this.BackgroundImage = Properties.Resources.brickGreen_cracked;
-            else if (skin == 1)
-                this.BackgroundImage = Properties.Resources.brickBlue_cracked;
-            else if (skin == 2)
-                this.BackgroundImage = Properties.Resources.brickYellow_cracked;
-            else if (skin == 3)
-                this.BackgroundImage = Properties.Resources.brickRed_cracked;
+            this.Left += X;
+            collision_block(block);
+            collision_wall(clienSizeWidth);
         }
-        public bool getHit()
+        private void collision_block(Block block)
         {
-            if (iscracked == false)
-            {
-                setCrackedSkin();
-                iscracked = true;
-                return false;
-            }
-            else
-            {
-                count--;
-                return true;
-            }
+            if (this.Bounds.IntersectsWith(block.Bounds))
+                X = -X;
+        }
+        private void collision_wall(int clienSizeWidth)
+        {
+            if (this.Right> clienSizeWidth || this.Left < 3)
+                X = -X;
         }
         #endregion
     }

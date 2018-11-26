@@ -145,7 +145,7 @@
             this.labelScore.AutoSize = true;
             this.labelScore.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelScore.Font = new System.Drawing.Font("Showcard Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore.Location = new System.Drawing.Point(12, 9);
+            this.labelScore.Location = new System.Drawing.Point(50, 7);
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(92, 28);
             this.labelScore.TabIndex = 37;
@@ -190,7 +190,7 @@
             // 
             this.PauseButton.BackgroundImage = global::minigame_breakout.Properties.Resources.pause;
             this.PauseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PauseButton.Location = new System.Drawing.Point(865, 765);
+            this.PauseButton.Location = new System.Drawing.Point(3, 3);
             this.PauseButton.Name = "PauseButton";
             this.PauseButton.Size = new System.Drawing.Size(41, 39);
             this.PauseButton.TabIndex = 100;

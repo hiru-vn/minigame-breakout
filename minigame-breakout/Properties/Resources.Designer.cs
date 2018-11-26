@@ -223,16 +223,6 @@ namespace minigame_breakout.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _29_Breakout_Tiles {
-            get {
-                object obj = ResourceManager.GetObject("_29_Breakout_Tiles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _30_Breakout_Tiles {
             get {
                 object obj = ResourceManager.GetObject("_30_Breakout_Tiles", resourceCulture);
@@ -526,6 +516,16 @@ namespace minigame_breakout.Properties {
         internal static System.Drawing.Bitmap ball6 {
             get {
                 object obj = ResourceManager.GetObject("ball6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap block_iron {
+            get {
+                object obj = ResourceManager.GetObject("block_iron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

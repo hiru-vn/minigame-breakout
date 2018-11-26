@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             this.Size = new System.Drawing.Size(60, 60);
+            BackgroundImage = Properties.Resources.block_iron;
         }
 
         #endregion

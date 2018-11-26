@@ -105,8 +105,14 @@ namespace minigame_breakout
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
-                    this.x -= 2;
-                    //this.y += 1;
+                    if (x <= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
@@ -123,8 +129,14 @@ namespace minigame_breakout
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
                 {
-                    this.x += 2;
-                    //this.y += 1;
+                    if (x >= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
@@ -163,8 +175,14 @@ namespace minigame_breakout
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
                 {
-                    this.x -= 2;
-                    //this.y += 1;
+                    if (x <= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
@@ -181,8 +199,14 @@ namespace minigame_breakout
                 }
                 else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
                 {
-                    this.x += 2;
-                    //this.y += 1;
+                    if (x >= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
                     this.reverseY();
                     this.ResetHitsPoint();
                     this.SpeedChange(player.IsBouncing);
@@ -206,7 +230,7 @@ namespace minigame_breakout
             {
                 if (X > 0)
                 {
-                    if (!isCrom) this.reverseX();
+                    this.reverseX();
                     addHitsPoint();
                     return true;
                 }
@@ -215,14 +239,14 @@ namespace minigame_breakout
             {
                 if (X < 0)
                 {
-                    if (!isCrom) this.reverseX();
+                    this.reverseX();
                     addHitsPoint();
                     return true;
                 }
             }
             else if (this.Bounds.IntersectsWith(block.Bounds))
             {
-                if (!isCrom) this.reverseY();
+                this.reverseY();
                 addHitsPoint();
                 return true;
             }
