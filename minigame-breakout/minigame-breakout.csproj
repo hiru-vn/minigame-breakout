@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Computer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Computer.Designer.cs">
+      <DependentUpon>Computer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ball.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="BallPvP.Designer.cs">
       <DependentUpon>BallPvP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPvC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPvC.Designer.cs">
+      <DependentUpon>FormPvC.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPvP.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPvC.resx">
+      <DependentUpon>FormPvC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPvP.resx">
       <DependentUpon>FormPvP.cs</DependentUpon>

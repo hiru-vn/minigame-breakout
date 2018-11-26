@@ -16,7 +16,7 @@ namespace minigame_breakout
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPvP());
+            Application.Run(new FormPvC());
         }
     }
 }

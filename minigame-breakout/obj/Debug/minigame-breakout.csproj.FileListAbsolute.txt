@@ -31,3 +31,4 @@ C:\Users\DELL\Desktop\New folder\minigame-breakout-master\minigame-breakout\obj\
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.FormMain.resources
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.FormPvP.resources
 D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame-breakout.csprojAssemblyReference.cache
+D:\myprojects\minigame-breakout\minigame-breakout\obj\Debug\minigame_breakout.FormPvC.resources

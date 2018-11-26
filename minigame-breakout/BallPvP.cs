@@ -153,6 +153,76 @@ namespace minigame_breakout
                 }
             }
         }
+        public void collision_Computer(Computer computer)
+        {
+            if (Y < 0)
+            {
+                if (this.Bounds.IntersectsWith(new Rectangle(new Point(computer.Location.X + 20, computer.Location.Y + computer.Height), new Size(computer.Width - 40, 1))))
+                {
+                    this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(computer.IsBouncing);
+                    if (computer.PassCrom && isCrom)
+                    {
+                        computer.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (computer.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
+                }
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(computer.Location.X, computer.Location.Y), new Size(15, computer.Height))))
+                {
+                    if (x <= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
+                    this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(computer.IsBouncing);
+                    if (computer.PassCrom && isCrom)
+                    {
+                        computer.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (computer.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
+                }
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(computer.Location.X + computer.Width - 5, computer.Location.Y), new Size(15, computer.Height))))
+                {
+                    if (x >= 0)
+                    {
+                        x -= 2;
+                    }
+                    else
+                    {
+                        reverseX();
+                    }
+                    this.reverseY();
+                    this.ResetHitsPoint();
+                    this.SpeedChange(computer.IsBouncing);
+                    if (computer.PassCrom && isCrom)
+                    {
+                        computer.PassCrom = false;
+                        isCrom = false;
+                    }
+                    else if (computer.PassCrom && !isCrom)
+                    {
+                        isCrom = true;
+                    }
+                    setSpeed();
+                }
+            }
+        }
         public void collision_Player(Player2 player)
         {
             if (Y < 0)
