@@ -45,6 +45,8 @@
             this.ball = new minigame_breakout.BallPvP();
             this.player = new minigame_breakout.Player();
             this.computer = new minigame_breakout.Computer();
+            this.DifficultLevel = new System.Windows.Forms.Label();
+            this.labelLevel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
@@ -213,6 +215,7 @@
             this.computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.computer.GoLeft = false;
             this.computer.GoRight = false;
+            this.computer.HardLevel = 1;
             this.computer.IsBouncing = false;
             this.computer.IsGunMode = false;
             this.computer.Location = new System.Drawing.Point(374, 53);
@@ -223,14 +226,38 @@
             this.computer.TabIndex = 112;
             this.computer.TabStop = false;
             // 
+            // DifficultLevel
+            // 
+            this.DifficultLevel.AutoSize = true;
+            this.DifficultLevel.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DifficultLevel.ForeColor = System.Drawing.Color.Silver;
+            this.DifficultLevel.Location = new System.Drawing.Point(327, 12);
+            this.DifficultLevel.Name = "DifficultLevel";
+            this.DifficultLevel.Size = new System.Drawing.Size(152, 26);
+            this.DifficultLevel.TabIndex = 113;
+            this.DifficultLevel.Text = "Difficult Level:";
+            // 
+            // labelLevel
+            // 
+            this.labelLevel.AutoSize = true;
+            this.labelLevel.Font = new System.Drawing.Font("MV Boli", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelLevel.Location = new System.Drawing.Point(485, 8);
+            this.labelLevel.Name = "labelLevel";
+            this.labelLevel.Size = new System.Drawing.Size(95, 31);
+            this.labelLevel.TabIndex = 114;
+            this.labelLevel.Text = "Normal";
+            // 
             // FormPvC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BackgroundImage = global::minigame_breakout.Properties.Resources.background2;
+            this.BackgroundImage = global::minigame_breakout.Properties.Resources.background4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 807);
+            this.Controls.Add(this.labelLevel);
+            this.Controls.Add(this.DifficultLevel);
             this.Controls.Add(this.computer);
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.block32);
@@ -283,5 +310,7 @@
         private Block3 block32;
         private System.Windows.Forms.PictureBox PauseButton;
         private Computer computer;
+        private System.Windows.Forms.Label DifficultLevel;
+        private System.Windows.Forms.Label labelLevel;
     }
 }

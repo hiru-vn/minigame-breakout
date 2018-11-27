@@ -177,12 +177,18 @@ namespace minigame_breakout
         private void setDefault()
         {
             this.DoubleBuffered = true;
+            computer.HardLevel = 0;
             labelLife1.BackColor = Color.Transparent;
             labelLife2.BackColor = Color.Transparent;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
             labelSpeed.BackColor = Color.Transparent;
             PauseButton.BackColor = Color.Transparent;
+            labelLevel.BackColor = Color.Transparent;
+            DifficultLevel.BackColor = Color.Transparent;
+            if (computer.HardLevel == 0) { labelLevel.Text = "Easy"; labelLevel.ForeColor = Color.Yellow; }
+            if (computer.HardLevel == 1) { labelLevel.Text = "Normal"; labelLevel.ForeColor = Color.Orange; }
+            if (computer.HardLevel == 2) { labelLevel.Text = "Difficult"; labelLevel.ForeColor = Color.Red; }
 
             this.GotFocus += new EventHandler(Resume);
             this.LostFocus += new EventHandler(Pause);
@@ -193,7 +199,7 @@ namespace minigame_breakout
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife1.Text = "0x";
-            MessageBox.Show("player 2 win");
+            MessageBox.Show("you have lose the computer, try better next time");
         }
         private void computerLoseStage()
         {
@@ -201,7 +207,7 @@ namespace minigame_breakout
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife2.Text = "0x";
-            MessageBox.Show("player 1 win");
+            MessageBox.Show("you have won the computer");
         }
         private void disabledTimer()
         {
@@ -228,5 +234,6 @@ namespace minigame_breakout
             labelSpeed.Text = "Ball speed: " + (float)(Math.Round(ball.Speed, 2));
         }
         #endregion
+
     }
 }
