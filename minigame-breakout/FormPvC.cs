@@ -13,10 +13,15 @@ namespace minigame_breakout
     public partial class FormPvC : Form
     {
         #region properties
+        private int hardlevel=2;
         public FormPvC()
         {
             InitializeComponent();
             setDefault();
+        }
+        public FormPvC(int level)
+        {
+            hardlevel = level;
         }
         #endregion
 
@@ -176,8 +181,8 @@ namespace minigame_breakout
         #region function
         private void setDefault()
         {
+            computer.HardLevel = 2;
             this.DoubleBuffered = true;
-            computer.HardLevel = 0;
             labelLife1.BackColor = Color.Transparent;
             labelLife2.BackColor = Color.Transparent;
             pictureBox1.BackColor = Color.Transparent;

@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace minigame_breakout
 {
-    public partial class FormMain : Form
+    public partial class FormSiglePlay : Form
     {
         #region properties
         private int score = 0;
-        public FormMain()
+        public FormSiglePlay()
         {
             InitializeComponent();
             setDefault();

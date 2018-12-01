@@ -25,7 +25,7 @@ namespace minigame_breakout
         protected int image = 1;
         protected int life = 3;
         protected bool passCrom = false;
-        private int hardLevel = 1;
+        private int hardLevel = 2;
 
         public Computer()
         {
@@ -255,7 +255,7 @@ namespace minigame_breakout
                 else
                     this.isBouncing = false;
             }
-            if (this.HardLevel == 1)
+            if (this.HardLevel == 2)
             {
                 if (player.Left > ball.Left && player.Right < Right)
                     this.isBouncing = true;

@@ -107,11 +107,11 @@
       <DependentUpon>Bullet.cs</DependentUpon>
     </Compile>
     <Compile Include="constant.cs" />
-    <Compile Include="FormMain.cs">
+    <Compile Include="FormSiglePlay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormSiglePlay.Designer.cs">
+      <DependentUpon>FormSiglePlay.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs">
       <SubType>Component</SubType>
@@ -136,8 +136,8 @@
     <Compile Include="MyButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormSiglePlay.resx">
+      <DependentUpon>FormSiglePlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPvC.resx">
       <DependentUpon>FormPvC.cs</DependentUpon>

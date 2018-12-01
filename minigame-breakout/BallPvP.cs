@@ -131,7 +131,7 @@ namespace minigame_breakout
                 {
                     if (x >= 0)
                     {
-                        x -= 2;
+                        x += 2;
                     }
                     else
                     {
@@ -201,7 +201,7 @@ namespace minigame_breakout
                 {
                     if (x >= 0)
                     {
-                        x -= 2;
+                        x += 2;
                     }
                     else
                     {
@@ -271,7 +271,7 @@ namespace minigame_breakout
                 {
                     if (x >= 0)
                     {
-                        x -= 2;
+                        x += 2;
                     }
                     else
                     {
