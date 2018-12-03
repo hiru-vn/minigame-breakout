@@ -119,15 +119,16 @@ namespace minigame_breakout
                     }
                     setSpeed();
                 }
-                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(15, player.Height))))
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X, player.Location.Y), new Size(20, player.Height))))
                 {
                     if (x <= 0)
                     {
-                        x -= 2;
+                        x -= 1;
+                        GetYfromXChange();
                     }
                     else
                     {
-                        reverseX();
+                        x = -(int)(5 * Math.Pow(1.25, speedLevel-1));
                     }
                     this.reverseY();
                     this.ResetHitsPoint();
@@ -143,15 +144,16 @@ namespace minigame_breakout
                     }
                     setSpeed();
                 }
-                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(15, player.Height))))
+                else if (this.Bounds.IntersectsWith(new Rectangle(new Point(player.Location.X + player.Width - 5, player.Location.Y), new Size(20, player.Height))))
                 {
                     if (x >= 0)
                     {
-                        x += 2;
+                        x += 1;
+                        GetYfromXChange();
                     }
                     else
                     {
-                        reverseX();
+                        x = (int)(5 * Math.Pow(1.25, speedLevel-1));
                     }
                     this.reverseY();
                     this.ResetHitsPoint();
@@ -245,8 +247,8 @@ namespace minigame_breakout
                     if (speedLevel == 3) BackColor = Color.OrangeRed;
                     if (speedLevel == 4) BackColor = Color.DarkRed;
 
-                    x = (int)(x * 1.2);
-                    y = (int)(y * 1.2);
+                    x = (int)(x * 1.25);
+                    y = (int)(y * 1.25);
                 }
             }
         }
@@ -261,9 +263,14 @@ namespace minigame_breakout
             else if (skin == 5) this.BackgroundImage = Properties.Resources.ball5;
             else if (skin == 6) this.BackgroundImage = Properties.Resources.ball6;
         }
-        public void setSpeed()
+        private void setSpeed()
         {
             speed = (float) Math.Sqrt(x * x + y * y);
+        }
+        private void GetYfromXChange()
+        {
+            y = (int)Math.Sqrt(speed * speed - x * x);
+            y = -y;
         }
         #endregion
     }
