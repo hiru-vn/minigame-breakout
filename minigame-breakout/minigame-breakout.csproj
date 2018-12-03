@@ -119,6 +119,12 @@
     <Compile Include="Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinh.designer.cs">
+      <DependentUpon>ManHinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPvP.resx">
       <DependentUpon>FormPvP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinh.resx">
+      <DependentUpon>ManHinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>
@@ -446,6 +455,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_burned %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_burned %281%29_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartoon-rocket-spaceship-take-off-vector-illustration-simple-retro-spaceship-icon-eps-cartoon-ro_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-icon-24661687_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAUSE_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit chose_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spchoose_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_i xu_ng_burned %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vscp2_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakoutName.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
