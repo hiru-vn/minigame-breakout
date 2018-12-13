@@ -45,6 +45,8 @@
             this.ball = new minigame_breakout.BallPvP();
             this.player2 = new minigame_breakout.Player2();
             this.player1 = new minigame_breakout.Player();
+            this.PauseName = new System.Windows.Forms.PictureBox();
+            this.Home = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
@@ -54,6 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
             this.SuspendLayout();
             // 
             // timerBall
@@ -77,22 +81,22 @@
             // labelSpeed
             // 
             this.labelSpeed.AutoSize = true;
-            this.labelSpeed.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeed.Location = new System.Drawing.Point(12, 774);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(122, 24);
+            this.labelSpeed.Size = new System.Drawing.Size(114, 25);
             this.labelSpeed.TabIndex = 102;
             this.labelSpeed.Text = "Ball speed: ";
             // 
             // labelLife2
             // 
             this.labelLife2.AutoSize = true;
-            this.labelLife2.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLife2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLife2.ForeColor = System.Drawing.Color.Black;
             this.labelLife2.Location = new System.Drawing.Point(799, 12);
             this.labelLife2.Margin = new System.Windows.Forms.Padding(0);
             this.labelLife2.Name = "labelLife2";
-            this.labelLife2.Size = new System.Drawing.Size(53, 35);
+            this.labelLife2.Size = new System.Drawing.Size(45, 32);
             this.labelLife2.TabIndex = 104;
             this.labelLife2.Text = "0x";
             this.labelLife2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,12 +114,12 @@
             // labelLife1
             // 
             this.labelLife1.AutoSize = true;
-            this.labelLife1.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLife1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLife1.ForeColor = System.Drawing.Color.Black;
             this.labelLife1.Location = new System.Drawing.Point(799, 764);
             this.labelLife1.Margin = new System.Windows.Forms.Padding(0);
             this.labelLife1.Name = "labelLife1";
-            this.labelLife1.Size = new System.Drawing.Size(53, 35);
+            this.labelLife1.Size = new System.Drawing.Size(45, 32);
             this.labelLife1.TabIndex = 106;
             this.labelLife1.Text = "0x";
             this.labelLife1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -223,6 +227,32 @@
             this.player1.TabIndex = 0;
             this.player1.TabStop = false;
             // 
+            // PauseName
+            // 
+            this.PauseName.BackColor = System.Drawing.Color.Transparent;
+            this.PauseName.BackgroundImage = global::minigame_breakout.Properties.Resources.PauseName;
+            this.PauseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PauseName.Location = new System.Drawing.Point(334, 404);
+            this.PauseName.Name = "PauseName";
+            this.PauseName.Size = new System.Drawing.Size(226, 144);
+            this.PauseName.TabIndex = 113;
+            this.PauseName.TabStop = false;
+            this.PauseName.Visible = false;
+            this.PauseName.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.Transparent;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Home.Location = new System.Drawing.Point(354, 257);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(200, 154);
+            this.Home.TabIndex = 112;
+            this.Home.TabStop = false;
+            this.Home.Visible = false;
+            this.Home.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // FormPvP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +261,8 @@
             this.BackgroundImage = global::minigame_breakout.Properties.Resources.background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 807);
+            this.Controls.Add(this.PauseName);
+            this.Controls.Add(this.Home);
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.block32);
             this.Controls.Add(this.block33);
@@ -243,6 +275,7 @@
             this.Controls.Add(this.ball);
             this.Controls.Add(this.player2);
             this.Controls.Add(this.player1);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "FormPvP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -261,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +318,7 @@
         private Block3 block33;
         private Block3 block32;
         private System.Windows.Forms.PictureBox PauseButton;
+        private System.Windows.Forms.PictureBox PauseName;
+        private System.Windows.Forms.PictureBox Home;
     }
 }

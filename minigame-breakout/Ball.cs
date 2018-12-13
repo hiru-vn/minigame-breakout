@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Media;
+using System.Threading;
 
 namespace minigame_breakout
 {
@@ -23,7 +25,6 @@ namespace minigame_breakout
         private bool isCrom = false;
         private static int countBall=0;
         private float speed = (float)7.07;
-
         public Ball()
         {
             InitializeComponent();
@@ -174,6 +175,7 @@ namespace minigame_breakout
         //Xu ly va cham voi block
         public bool collision_Block(Block block)
         {
+            
             if (this.Bounds.IntersectsWith(new Rectangle(new Point(block.Location.X,block.Location.Y), new Size(1, block.Height))))
             {
                 if (X > 0)

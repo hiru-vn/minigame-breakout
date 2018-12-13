@@ -35,8 +35,11 @@
             this.labelLife = new System.Windows.Forms.Label();
             this.labelCount = new System.Windows.Forms.Label();
             this.TimeLeft = new System.Windows.Forms.Timer(this.components);
+            this.labelSpeed = new System.Windows.Forms.Label();
+            this.Home = new System.Windows.Forms.PictureBox();
             this.PauseButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PauseName = new System.Windows.Forms.PictureBox();
             this.block128 = new minigame_breakout.Block1();
             this.block127 = new minigame_breakout.Block1();
             this.block126 = new minigame_breakout.Block1();
@@ -86,9 +89,10 @@
             this.block2 = new minigame_breakout.Block2();
             this.Ball = new minigame_breakout.Ball();
             this.Player = new minigame_breakout.Player();
-            this.labelSpeed = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block128)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block127)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block126)).BeginInit();
@@ -144,10 +148,10 @@
             // 
             this.labelScore.AutoSize = true;
             this.labelScore.BackColor = System.Drawing.SystemColors.Highlight;
-            this.labelScore.Font = new System.Drawing.Font("Showcard Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore.Location = new System.Drawing.Point(50, 7);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(92, 28);
+            this.labelScore.Size = new System.Drawing.Size(81, 26);
             this.labelScore.TabIndex = 37;
             this.labelScore.Text = "Score:";
             // 
@@ -160,12 +164,12 @@
             // labelLife
             // 
             this.labelLife.AutoSize = true;
-            this.labelLife.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLife.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLife.ForeColor = System.Drawing.Color.Black;
             this.labelLife.Location = new System.Drawing.Point(812, 0);
             this.labelLife.Margin = new System.Windows.Forms.Padding(0);
             this.labelLife.Name = "labelLife";
-            this.labelLife.Size = new System.Drawing.Size(53, 35);
+            this.labelLife.Size = new System.Drawing.Size(45, 32);
             this.labelLife.TabIndex = 86;
             this.labelLife.Text = "0x";
             this.labelLife.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,18 +177,42 @@
             // labelCount
             // 
             this.labelCount.AutoSize = true;
-            this.labelCount.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCount.Location = new System.Drawing.Point(422, 0);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(64, 34);
+            this.labelCount.Size = new System.Drawing.Size(63, 32);
             this.labelCount.TabIndex = 89;
             this.labelCount.Text = "100";
+            this.labelCount.Click += new System.EventHandler(this.labelCount_Click);
             // 
             // TimeLeft
             // 
             this.TimeLeft.Enabled = true;
             this.TimeLeft.Interval = 1000;
             this.TimeLeft.Tick += new System.EventHandler(this.TimeLeft_Tick);
+            // 
+            // labelSpeed
+            // 
+            this.labelSpeed.AutoSize = true;
+            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.Location = new System.Drawing.Point(0, 780);
+            this.labelSpeed.Name = "labelSpeed";
+            this.labelSpeed.Size = new System.Drawing.Size(114, 25);
+            this.labelSpeed.TabIndex = 101;
+            this.labelSpeed.Text = "Ball speed: ";
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.Transparent;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Home.Location = new System.Drawing.Point(347, 205);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(200, 154);
+            this.Home.TabIndex = 102;
+            this.Home.TabStop = false;
+            this.Home.Visible = false;
+            this.Home.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // PauseButton
             // 
@@ -207,6 +235,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(40, 35);
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
+            // 
+            // PauseName
+            // 
+            this.PauseName.BackColor = System.Drawing.Color.Transparent;
+            this.PauseName.BackgroundImage = global::minigame_breakout.Properties.Resources.PauseName;
+            this.PauseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PauseName.Location = new System.Drawing.Point(334, 353);
+            this.PauseName.Name = "PauseName";
+            this.PauseName.Size = new System.Drawing.Size(224, 144);
+            this.PauseName.TabIndex = 103;
+            this.PauseName.TabStop = false;
+            this.PauseName.Visible = false;
+            this.PauseName.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // block128
             // 
@@ -676,22 +717,14 @@
             this.Player.TabIndex = 38;
             this.Player.TabStop = false;
             // 
-            // labelSpeed
-            // 
-            this.labelSpeed.AutoSize = true;
-            this.labelSpeed.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpeed.Location = new System.Drawing.Point(0, 780);
-            this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(122, 24);
-            this.labelSpeed.TabIndex = 101;
-            this.labelSpeed.Text = "Ball speed: ";
-            // 
-            // FormMain
+            // FormSiglePlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(907, 807);
+            this.Controls.Add(this.PauseName);
+            this.Controls.Add(this.Home);
             this.Controls.Add(this.labelSpeed);
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.block128);
@@ -749,15 +782,17 @@
             this.Controls.Add(this.labelScore);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
-            this.Name = "FormMain";
+            this.Name = "FormSiglePlay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseIsDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseIsMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseIsUp);
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block128)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block127)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block126)).EndInit();
@@ -870,6 +905,8 @@
         private Block1 block128;
         private System.Windows.Forms.PictureBox PauseButton;
         private System.Windows.Forms.Label labelSpeed;
+        private System.Windows.Forms.PictureBox Home;
+        private System.Windows.Forms.PictureBox PauseName;
     }
 }
 

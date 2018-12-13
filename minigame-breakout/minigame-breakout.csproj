@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +45,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Computer.cs">
@@ -69,6 +71,12 @@
     </Compile>
     <Compile Include="FormPvC.Designer.cs">
       <DependentUpon>FormPvC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPVCLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPVCLoad.Designer.cs">
+      <DependentUpon>FormPVCLoad.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPvP.cs">
       <SubType>Form</SubType>
@@ -119,6 +127,12 @@
     <Compile Include="Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScreen.designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -136,6 +150,21 @@
     <Compile Include="MyButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ULose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ULose.Designer.cs">
+      <DependentUpon>ULose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UWIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UWIN.Designer.cs">
+      <DependentUpon>UWIN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormPVCLoad.resx">
+      <DependentUpon>FormPVCLoad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSiglePlay.resx">
       <DependentUpon>FormSiglePlay.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +174,9 @@
     <EmbeddedResource Include="FormPvP.resx">
       <DependentUpon>FormPvP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Player.resx">
       <DependentUpon>Player.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +184,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ULose.resx">
+      <DependentUpon>ULose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UWIN.resx">
+      <DependentUpon>UWIN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -446,6 +484,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spchoose_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_burned %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_burned %281%29_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vscp2_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartoon-rocket-spaceship-take-off-vector-illustration-simple-retro-spaceship-icon-eps-cartoon-ro_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_i xu_ng_burned %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled_burned %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit chose_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woosadasda_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bao_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3a1f190f17e3c13f704f5bf121b0cd7e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy_burned2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy_Choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal_Choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_Choose.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

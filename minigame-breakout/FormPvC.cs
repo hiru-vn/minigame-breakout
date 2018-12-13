@@ -13,7 +13,7 @@ namespace minigame_breakout
     public partial class FormPvC : Form
     {
         #region properties
-        private int hardlevel=2;
+        private int hardlevel;
         public FormPvC()
         {
             InitializeComponent();
@@ -36,6 +36,8 @@ namespace minigame_breakout
         }
         private void PauseButton_Click(object sender, EventArgs e)
         {
+            Home.Visible = !(Home.Visible);
+            PauseName.Visible = !(PauseName.Visible);
             if (PauseButton.Tag != null)
             {
                 if (PauseButton.Tag.ToString() == "pause")
@@ -172,7 +174,7 @@ namespace minigame_breakout
         }
         private void timerPlayer2_Tick(object sender, EventArgs e)
         {
-            computer.move(ball,player,ClientSize.Width,ClientSize.Height);
+            computer.move(ball, player, ClientSize.Width, ClientSize.Height);
             computer.collision_Wall(ClientSize.Width);
             labelLife2.Text = computer.Life.ToString() + "x";
         }
@@ -181,7 +183,7 @@ namespace minigame_breakout
         #region function
         private void setDefault()
         {
-            computer.HardLevel = 2;
+            
             this.DoubleBuffered = true;
             labelLife1.BackColor = Color.Transparent;
             labelLife2.BackColor = Color.Transparent;
@@ -240,5 +242,31 @@ namespace minigame_breakout
         }
         #endregion
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartScreen ManHinh = new StartScreen();
+            ManHinh.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DifficultLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void SetHardLevel(int HL)
+        {
+            computer.HardLevel = HL;
+        }
     }
 }

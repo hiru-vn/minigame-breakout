@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace minigame_breakout
 {
@@ -21,7 +22,7 @@ namespace minigame_breakout
             setDefault();
         }
         #endregion
-
+        SoundPlayer tiktok = new SoundPlayer(@"C:\Users\PHUC KHAI\Documents\GitHub\minigame-breakout-2\tiktok.wav");
         #region key_mouse_events
         private void Pause(object sender, EventArgs e)
         {
@@ -35,6 +36,8 @@ namespace minigame_breakout
         }
         private void PauseButton_Click(object sender, EventArgs e)
         {
+            Home.Visible = !(Home.Visible);
+            PauseName.Visible = !(PauseName.Visible);
             if (PauseButton.Tag != null)
             {
                 if (PauseButton.Tag.ToString() == "pause")
@@ -116,8 +119,15 @@ namespace minigame_breakout
             int count = int.Parse(labelCount.Text);
             count--;
             labelCount.Text = count.ToString();
-            if (count == 10) labelCount.ForeColor = Color.Red;
-            if (count == 0) loseStage();
+            if (count == 10) {
+                labelCount.ForeColor = Color.Red;
+                tiktok.PlayLooping();
+            }
+            if (count == 0)
+            {
+                tiktok.Stop();
+                loseStage();
+            }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -330,7 +340,12 @@ namespace minigame_breakout
             //{
             //    this.Close();
             //}
-            MessageBox.Show("you lose!");
+
+            this.Hide();
+            UWIN Uwin = new UWIN();
+            Uwin.ShowDialog();
+            Uwin.Show();
+            this.Close();
         }
         private void winStage()
         {
@@ -339,9 +354,30 @@ namespace minigame_breakout
             this.timer1.Enabled = false;
             this.TimeLeft.Enabled = false;
             score = 0;
-            MessageBox.Show("you win!");
+            this.Hide();
+            ULose ULose = new ULose();
+            ULose.ShowDialog();
+            ULose.Show();
+            this.Close();
         }
         #endregion
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartScreen ManHinh = new StartScreen();
+            ManHinh.ShowDialog();
+            this.Close();
+        }
+
+        private void labelCount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

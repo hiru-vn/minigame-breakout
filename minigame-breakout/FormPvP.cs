@@ -31,6 +31,8 @@ namespace minigame_breakout
         }
         private void PauseButton_Click(object sender, EventArgs e)
         {
+            Home.Visible = !(Home.Visible);
+            PauseName.Visible = !(PauseName.Visible);
             if (PauseButton.Tag != null)
             {
                 if (PauseButton.Tag.ToString() == "pause")
@@ -228,5 +230,18 @@ namespace minigame_breakout
             labelSpeed.Text = "Ball speed: " + (float)(Math.Round(ball.Speed, 2));
         }
         #endregion
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartScreen ManHinh = new StartScreen();
+            ManHinh.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
