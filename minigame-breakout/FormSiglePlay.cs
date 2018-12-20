@@ -16,13 +16,16 @@ namespace minigame_breakout
     {
         #region properties
         private int score = 0;
+        private SoundPlayer backgroundSound = new SoundPlayer(Properties.Resources.singleplayer);
+        private SoundPlayer tiktok = new SoundPlayer(Properties.Resources.tiktok);
         public FormSiglePlay()
         {
+            backgroundSound.PlayLooping();
             InitializeComponent();
             setDefault();
         }
         #endregion
-        SoundPlayer tiktok = new SoundPlayer(@"C:\Users\PHUC KHAI\Documents\GitHub\minigame-breakout-2\tiktok.wav");
+
         #region key_mouse_events
         private void Pause(object sender, EventArgs e)
         {
@@ -332,19 +335,8 @@ namespace minigame_breakout
             this.TimeLeft.Enabled = false;
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
-            //if (MessageBox.Show("you lose! try again?", "lose", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //{
-            //    Application.Restart();
-            //}
-            //else
-            //{
-            //    this.Close();
-            //}
-
-            this.Hide();
-            UWIN Uwin = new UWIN();
-            Uwin.ShowDialog();
-            Uwin.Show();
+            ULose U = new ULose();
+            U.ShowDialog();
             this.Close();
         }
         private void winStage()
@@ -354,30 +346,17 @@ namespace minigame_breakout
             this.timer1.Enabled = false;
             this.TimeLeft.Enabled = false;
             score = 0;
-            this.Hide();
-            ULose ULose = new ULose();
-            ULose.ShowDialog();
-            ULose.Show();
+            UWIN u = new UWIN();
+            u.ShowDialog();
             this.Close();
         }
         #endregion
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            StartScreen ManHinh = new StartScreen();
-            ManHinh.ShowDialog();
             this.Close();
         }
 
-        private void labelCount_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

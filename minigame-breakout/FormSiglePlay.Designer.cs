@@ -183,7 +183,6 @@
             this.labelCount.Size = new System.Drawing.Size(63, 32);
             this.labelCount.TabIndex = 89;
             this.labelCount.Text = "100";
-            this.labelCount.Click += new System.EventHandler(this.labelCount_Click);
             // 
             // TimeLeft
             // 
@@ -247,7 +246,6 @@
             this.PauseName.TabIndex = 103;
             this.PauseName.TabStop = false;
             this.PauseName.Visible = false;
-            this.PauseName.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // block128
             // 
@@ -781,6 +779,7 @@
             this.Controls.Add(this.Player);
             this.Controls.Add(this.labelScore);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormSiglePlay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

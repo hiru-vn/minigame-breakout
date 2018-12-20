@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace minigame_breakout
     public partial class FormPvP : Form
     {
         #region properties
+        private SoundPlayer backgroundSound = new SoundPlayer(Properties.Resources.PVP);
+
         public FormPvP()
         {
             InitializeComponent();
@@ -125,7 +128,7 @@ namespace minigame_breakout
             {
                 this.Controls.Remove(ball);
                 if (player1.lostLife())
-                    player1LoseStage();
+                    player2Win();
                 else
                 {
                     BallPvP otherBall = new BallPvP();
@@ -140,7 +143,7 @@ namespace minigame_breakout
             {
                 this.Controls.Remove(ball);
                 if (player2.lostLife())
-                    player2LoseStage();
+                    player1Win();
                 else
                 {
                     BallPvP otherBall = new BallPvP();
@@ -188,22 +191,28 @@ namespace minigame_breakout
 
             this.GotFocus += new EventHandler(Resume);
             this.LostFocus += new EventHandler(Pause);
+
+            backgroundSound.PlayLooping();
         }
-        private void player1LoseStage()
+        private void player2Win()
         {
             disabledTimer();
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife1.Text = "0x";
-            MessageBox.Show("player 2 win");
+            UWIN U = new UWIN(2);
+            U.ShowDialog();
+            this.Close();
         }
-        private void player2LoseStage()
+        private void player1Win()
         {
             disabledTimer();
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife2.Text = "0x";
-            MessageBox.Show("player 1 win");
+            UWIN U = new UWIN(1);
+            U.ShowDialog();
+            this.Close();
         }
         private void disabledTimer()
         {
@@ -233,15 +242,7 @@ namespace minigame_breakout
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            StartScreen ManHinh = new StartScreen();
-            ManHinh.ShowDialog();
             this.Close();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

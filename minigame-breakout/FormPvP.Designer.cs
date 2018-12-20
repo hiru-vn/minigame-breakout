@@ -103,11 +103,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::minigame_breakout.Properties.Resources.function_heart;
+            this.pictureBox1.BackgroundImage = global::minigame_breakout.Properties.Resources.Girl;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(855, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(847, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 35);
             this.pictureBox1.TabIndex = 103;
             this.pictureBox1.TabStop = false;
             // 
@@ -126,11 +126,12 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::minigame_breakout.Properties.Resources.function_heart;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::minigame_breakout.Properties.Resources.Boy;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(855, 763);
+            this.pictureBox2.Location = new System.Drawing.Point(847, 764);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 34);
             this.pictureBox2.TabIndex = 105;
             this.pictureBox2.TabStop = false;
             // 
@@ -238,7 +239,6 @@
             this.PauseName.TabIndex = 113;
             this.PauseName.TabStop = false;
             this.PauseName.Visible = false;
-            this.PauseName.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Home
             // 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +13,13 @@ namespace minigame_breakout
 {
     public partial class StartScreen : Form
     {
-        
+        private SoundPlayer backgroundSound = new System.Media.SoundPlayer(Properties.Resources.Screenstart);
         //public int VSpeed;
         //public int HSpeed;
         public StartScreen()
         {
             InitializeComponent();
+            backgroundSound.PlayLooping();
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)
@@ -72,30 +74,31 @@ namespace minigame_breakout
         private void splayer_Click(object sender, EventArgs e)
         {
             this.Hide();
+            backgroundSound.Stop();
             FormSiglePlay FormMain = new FormSiglePlay();
             FormMain.ShowDialog();
-            FormMain.Show();
-            this.Close();
+            this.Show();
+            backgroundSound.PlayLooping();
         }
 
         private void twoPlayer_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            backgroundSound.Stop();
             FormPvP FormPvP = new FormPvP();
             FormPvP.ShowDialog();
-            FormPvP.Show();
-            this.Close();
-            
+            this.Show();
+            backgroundSound.PlayLooping();
         }
 
         private void VsC_Click(object sender, EventArgs e)
         {
             this.Hide();
+            backgroundSound.Stop();
             FormPVCLoad FormPvC = new FormPVCLoad();
             FormPvC.ShowDialog();
-            FormPvC.Show();
-            this.Close();
-        
+            this.Show();
+            backgroundSound.PlayLooping();
         }
 
         private void Quit_Click_1(object sender, EventArgs e)

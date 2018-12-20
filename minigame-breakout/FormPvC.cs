@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +15,17 @@ namespace minigame_breakout
     {
         #region properties
         private int hardlevel;
+        private SoundPlayer backgroundSound = new SoundPlayer(Properties.Resources.PVC);
         public FormPvC()
         {
-            InitializeComponent();
-            setDefault();
+            //InitializeComponent();
+            //setDefault();
         }
         public FormPvC(int level)
         {
+            InitializeComponent();
             hardlevel = level;
+            setDefault();
         }
         #endregion
 
@@ -183,7 +187,6 @@ namespace minigame_breakout
         #region function
         private void setDefault()
         {
-            
             this.DoubleBuffered = true;
             labelLife1.BackColor = Color.Transparent;
             labelLife2.BackColor = Color.Transparent;
@@ -193,12 +196,15 @@ namespace minigame_breakout
             PauseButton.BackColor = Color.Transparent;
             labelLevel.BackColor = Color.Transparent;
             DifficultLevel.BackColor = Color.Transparent;
+            computer.HardLevel = hardlevel;
             if (computer.HardLevel == 0) { labelLevel.Text = "Easy"; labelLevel.ForeColor = Color.Yellow; }
             if (computer.HardLevel == 1) { labelLevel.Text = "Normal"; labelLevel.ForeColor = Color.Orange; }
             if (computer.HardLevel == 2) { labelLevel.Text = "Difficult"; labelLevel.ForeColor = Color.Red; }
 
             this.GotFocus += new EventHandler(Resume);
             this.LostFocus += new EventHandler(Pause);
+
+            backgroundSound.PlayLooping();
         }
         private void playerLoseStage()
         {
@@ -206,7 +212,9 @@ namespace minigame_breakout
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife1.Text = "0x";
-            MessageBox.Show("you have lose the computer, try better next time");
+            ULose U = new ULose();
+            U.ShowDialog();
+            this.Close();
         }
         private void computerLoseStage()
         {
@@ -214,7 +222,9 @@ namespace minigame_breakout
             this.LostFocus -= new System.EventHandler(Pause);
             this.GotFocus -= new System.EventHandler(Resume);
             labelLife2.Text = "0x";
-            MessageBox.Show("you have won the computer");
+            UWIN U = new UWIN();
+            U.ShowDialog();
+            this.Close();
         }
         private void disabledTimer()
         {
@@ -244,29 +254,7 @@ namespace minigame_breakout
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            StartScreen ManHinh = new StartScreen();
-            ManHinh.ShowDialog();
             this.Close();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelLevel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DifficultLevel_Click(object sender, EventArgs e)
-        {
-
-        }
-        public void SetHardLevel(int HL)
-        {
-            computer.HardLevel = HL;
         }
     }
 }

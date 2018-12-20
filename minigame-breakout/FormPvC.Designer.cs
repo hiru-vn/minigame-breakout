@@ -39,27 +39,27 @@
             this.labelLife1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PauseButton = new System.Windows.Forms.PictureBox();
+            this.DifficultLevel = new System.Windows.Forms.Label();
+            this.labelLevel = new System.Windows.Forms.Label();
+            this.PauseName = new System.Windows.Forms.PictureBox();
+            this.Home = new System.Windows.Forms.PictureBox();
+            this.computer = new minigame_breakout.Computer();
             this.block32 = new minigame_breakout.Block3();
             this.block33 = new minigame_breakout.Block3();
             this.block31 = new minigame_breakout.Block3();
             this.ball = new minigame_breakout.BallPvP();
             this.player = new minigame_breakout.Player();
-            this.computer = new minigame_breakout.Computer();
-            this.DifficultLevel = new System.Windows.Forms.Label();
-            this.labelLevel = new System.Windows.Forms.Label();
-            this.PauseName = new System.Windows.Forms.PictureBox();
-            this.Home = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home)).BeginInit();
             this.SuspendLayout();
             // 
             // timerBall
@@ -148,6 +148,71 @@
             this.PauseButton.Tag = "pause";
             this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
             // 
+            // DifficultLevel
+            // 
+            this.DifficultLevel.AutoSize = true;
+            this.DifficultLevel.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DifficultLevel.ForeColor = System.Drawing.Color.Silver;
+            this.DifficultLevel.Location = new System.Drawing.Point(327, 12);
+            this.DifficultLevel.Name = "DifficultLevel";
+            this.DifficultLevel.Size = new System.Drawing.Size(152, 26);
+            this.DifficultLevel.TabIndex = 113;
+            this.DifficultLevel.Text = "Difficult Level:";
+            // 
+            // labelLevel
+            // 
+            this.labelLevel.AutoSize = true;
+            this.labelLevel.Font = new System.Drawing.Font("MV Boli", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelLevel.Location = new System.Drawing.Point(485, 8);
+            this.labelLevel.Name = "labelLevel";
+            this.labelLevel.Size = new System.Drawing.Size(95, 31);
+            this.labelLevel.TabIndex = 114;
+            this.labelLevel.Text = "Normal";
+            // 
+            // PauseName
+            // 
+            this.PauseName.BackColor = System.Drawing.Color.Transparent;
+            this.PauseName.BackgroundImage = global::minigame_breakout.Properties.Resources.PauseName;
+            this.PauseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PauseName.Location = new System.Drawing.Point(317, 392);
+            this.PauseName.Name = "PauseName";
+            this.PauseName.Size = new System.Drawing.Size(239, 144);
+            this.PauseName.TabIndex = 116;
+            this.PauseName.TabStop = false;
+            this.PauseName.Visible = false;
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.Transparent;
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Home.Location = new System.Drawing.Point(341, 245);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(200, 154);
+            this.Home.TabIndex = 115;
+            this.Home.TabStop = false;
+            this.Home.Visible = false;
+            this.Home.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // computer
+            // 
+            this.computer.BackColor = System.Drawing.Color.Transparent;
+            this.computer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("computer.BackgroundImage")));
+            this.computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.computer.GoLeft = false;
+            this.computer.GoRight = false;
+            this.computer.HardLevel = 1;
+            this.computer.IsBouncing = false;
+            this.computer.IsGunMode = false;
+            this.computer.Location = new System.Drawing.Point(374, 53);
+            this.computer.Name = "computer";
+            this.computer.PassCrom = false;
+            this.computer.Size = new System.Drawing.Size(131, 27);
+            this.computer.Speed = 10;
+            this.computer.TabIndex = 112;
+            this.computer.TabStop = false;
+            // 
             // block32
             // 
             this.block32.BackColor = System.Drawing.Color.Transparent;
@@ -212,74 +277,6 @@
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             // 
-            // computer
-            // 
-            this.computer.BackColor = System.Drawing.Color.Transparent;
-            this.computer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("computer.BackgroundImage")));
-            this.computer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.computer.GoLeft = false;
-            this.computer.GoRight = false;
-            this.computer.HardLevel = 1;
-            this.computer.IsBouncing = false;
-            this.computer.IsGunMode = false;
-            this.computer.Location = new System.Drawing.Point(374, 53);
-            this.computer.Name = "computer";
-            this.computer.PassCrom = false;
-            this.computer.Size = new System.Drawing.Size(131, 27);
-            this.computer.Speed = 10;
-            this.computer.TabIndex = 112;
-            this.computer.TabStop = false;
-            // 
-            // DifficultLevel
-            // 
-            this.DifficultLevel.AutoSize = true;
-            this.DifficultLevel.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DifficultLevel.ForeColor = System.Drawing.Color.Silver;
-            this.DifficultLevel.Location = new System.Drawing.Point(327, 12);
-            this.DifficultLevel.Name = "DifficultLevel";
-            this.DifficultLevel.Size = new System.Drawing.Size(152, 26);
-            this.DifficultLevel.TabIndex = 113;
-            this.DifficultLevel.Text = "Difficult Level:";
-            this.DifficultLevel.Click += new System.EventHandler(this.DifficultLevel_Click);
-            // 
-            // labelLevel
-            // 
-            this.labelLevel.AutoSize = true;
-            this.labelLevel.Font = new System.Drawing.Font("MV Boli", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelLevel.Location = new System.Drawing.Point(485, 8);
-            this.labelLevel.Name = "labelLevel";
-            this.labelLevel.Size = new System.Drawing.Size(95, 31);
-            this.labelLevel.TabIndex = 114;
-            this.labelLevel.Text = "Normal";
-            this.labelLevel.Click += new System.EventHandler(this.labelLevel_Click);
-            // 
-            // PauseName
-            // 
-            this.PauseName.BackColor = System.Drawing.Color.Transparent;
-            this.PauseName.BackgroundImage = global::minigame_breakout.Properties.Resources.PauseName;
-            this.PauseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PauseName.Location = new System.Drawing.Point(317, 392);
-            this.PauseName.Name = "PauseName";
-            this.PauseName.Size = new System.Drawing.Size(239, 144);
-            this.PauseName.TabIndex = 116;
-            this.PauseName.TabStop = false;
-            this.PauseName.Visible = false;
-            this.PauseName.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // Home
-            // 
-            this.Home.BackColor = System.Drawing.Color.Transparent;
-            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
-            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Home.Location = new System.Drawing.Point(341, 245);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(200, 154);
-            this.Home.TabIndex = 115;
-            this.Home.TabStop = false;
-            this.Home.Visible = false;
-            this.Home.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // FormPvC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,6 +302,7 @@
             this.Controls.Add(this.ball);
             this.Controls.Add(this.player);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormPvC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -316,14 +314,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PauseName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

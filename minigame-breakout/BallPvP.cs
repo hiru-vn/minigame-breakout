@@ -69,18 +69,21 @@ namespace minigame_breakout
         }
 
         //Xu ly va cham voi tuong
-        public void collision_Wall(int clientWidthSize)
+        public bool collision_Wall(int clientWidthSize)
         {
             if (this.Left + constant.ballHeight > clientWidthSize)
             {
                 if (X > 0)
                     this.reverseX();
+                return true;
             }
             else if (this.Left < 5)
             {
                 if (X < 0)
                     this.reverseX();
+                return true;
             }
+            return false;
         }
         //Xu ly va cham voi player
         public void collision_Player(Player player)

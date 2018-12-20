@@ -17,16 +17,6 @@ namespace minigame_breakout
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             pictureBox1.BackgroundImage = Properties.Resources.Easy_Choose;
@@ -36,18 +26,29 @@ namespace minigame_breakout
         {
             pictureBox1.BackgroundImage = Properties.Resources.Easy;
         }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPvC FPVC = new FormPvC(0);
+
+            FPVC.ShowDialog();
+            this.Close();
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPvC FPVC = new FormPvC();
-         
+            FormPvC FPVC = new FormPvC(1);     
             FPVC.ShowDialog();
-            FPVC.SetHardLevel(1);
-            FPVC.Show();
-            FPVC.Show();
+            this.Close();
         }
-
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPvC FPVC = new FormPvC(2);
+            FPVC.ShowDialog();
+            this.Close();
+        }
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
             pictureBox2.BackgroundImage = Properties.Resources.Normal_Choose;
@@ -66,28 +67,6 @@ namespace minigame_breakout
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
             pictureBox3.BackgroundImage = Properties.Resources.Hard;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormPvC FPVC = new FormPvC();
-           
-            FPVC.ShowDialog();
-            FPVC.SetHardLevel(0);
-            FPVC.Show();
-            this.Close();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormPvC FPVC = new FormPvC();
-           
-            FPVC.ShowDialog();
-            FPVC.SetHardLevel(2);
-            FPVC.Show();
-            this.Close();
         }
     }
 }

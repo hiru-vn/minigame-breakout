@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minigame-breakout", "minigame-breakout\minigame-breakout.csproj", "{281722B0-7310-4B40-A0EB-256EBF0C4065}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BreakoutSetup", "BreakoutSetup\BreakoutSetup.vdproj", "{08B18FB2-1B11-4D5F-B22D-C64AEF822640}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{281722B0-7310-4B40-A0EB-256EBF0C4065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{281722B0-7310-4B40-A0EB-256EBF0C4065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{281722B0-7310-4B40-A0EB-256EBF0C4065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B18FB2-1B11-4D5F-B22D-C64AEF822640}.Debug|Any CPU.ActiveCfg = Debug
+		{08B18FB2-1B11-4D5F-B22D-C64AEF822640}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

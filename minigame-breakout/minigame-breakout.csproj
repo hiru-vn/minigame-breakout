@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -127,6 +130,12 @@
     <Compile Include="Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyLogin.Designer.cs">
+      <DependentUpon>KeyLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +183,9 @@
     <EmbeddedResource Include="FormPvP.resx">
       <DependentUpon>FormPvP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KeyLogin.resx">
+      <DependentUpon>KeyLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +203,9 @@
     <EmbeddedResource Include="UWIN.resx">
       <DependentUpon>UWIN.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -562,6 +577,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Hard_Choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PVC.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PVP.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenstart.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singleplayer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiktok.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youwin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boy_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girl_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_burned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
