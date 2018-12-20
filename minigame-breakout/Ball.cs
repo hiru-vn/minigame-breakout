@@ -124,8 +124,7 @@ namespace minigame_breakout
                 {
                     if (x <= 0)
                     {
-                        x -= 1;
-                        GetYfromXChange();
+                        x -= 2;
                     }
                     else
                     {
@@ -149,8 +148,7 @@ namespace minigame_breakout
                 {
                     if (x >= 0)
                     {
-                        x += 1;
-                        GetYfromXChange();
+                        x += 2;
                     }
                     else
                     {

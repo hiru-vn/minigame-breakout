@@ -65,7 +65,7 @@ namespace minigame_breakout
                 Player.GoLeft = true;
                 Player.GoRight = false;
             }
-            else if ((e.KeyCode == Keys.Right || e.KeyCode == Keys.S) && (this.Player.Left + Player.Width) < ClientSize.Width)
+            else if ((e.KeyCode == Keys.Right || e.KeyCode == Keys.D) && (this.Player.Left + Player.Width) < ClientSize.Width)
             {
                 Player.GoRight = true;
                 Player.GoLeft = false;
@@ -79,7 +79,7 @@ namespace minigame_breakout
         {
             if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
                 Player.GoLeft = false;
-            else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.S)
+            else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
                 Player.GoRight = false;
             else if (e.KeyCode == Keys.Space)
             {
