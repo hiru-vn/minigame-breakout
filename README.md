@@ -13,6 +13,7 @@ II. Thiết kế
 	Game được thiết kế phân lớp rõ ràng tương ứng với từng đối tượng. Nhiều tính năng hấp dẫn cùng với âm thanh sinh động.
 2.1/ Giới thiệu
 	Game được mã hóa với mật khẩu là số chẵn và tự động nhớ mật khẩu sau lần đầu đăng nhập. Sau khi đăng nhập là phần màn hình chính của trò chơi với 4 lựa chọn: 
+	<iframe src="https://giphy.com/embed/PhnUgKXp29uH789cJd" width="480" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/PhnUgKXp29uH789cJd">via GIPHY</a></p>
 + Single Player: Tương ứng với người chơi đơn, cổ điển thông thường.
 + Two Player: Hai người chơi, chơi cùng với nhau.
 + Vs Computer: Người chơi sẽ chiến đấu với máy. Có ba chế độ để lựa chọn là dễ, trung bình và khó để người chơi có thể lựa chọn.
