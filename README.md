@@ -18,7 +18,7 @@ II. Thiết kế
 	
 	
 	
-<a href="https://imgflip.com/gif/2pi4gd"><img src="https://i.imgflip.com/2pi4gd.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/2pi4nj"><img src="https://i.imgflip.com/2pi4nj.gif" title="made at imgflip.com"/></a>
 + Single Player: Tương ứng với người chơi đơn, cổ điển thông thường.
 + Two Player: Hai người chơi, chơi cùng với nhau.
 + Vs Computer: Người chơi sẽ chiến đấu với máy. Có ba chế độ để lựa chọn là dễ, trung bình và khó để người chơi có thể lựa chọn.
