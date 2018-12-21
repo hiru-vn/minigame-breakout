@@ -1,5 +1,4 @@
 # minigame-breakout
-A simple game using Visual C#
 I. Giới thiệu
 	Các lớp gạch được xếp phía nửa trên màn hình. Một quả bóng di chuyển trong phạm vi màn hình và bị nảy bật lại khi chạm vào góc trên và hai bên. Khi một viên gạch bị bắn trúng bởi quả bóng thì quả bóng nảy ra và viên gạch bị nứt hoặc bị phá hủy. Người chơi điều khiển một ván trượt phía dưới màn hình để không cho quả bóng chạm đáy màn hình. Người chơi sẽ chiến thắng khi phá hủy toàn bộ gạch và sẽ mất một lượt chơi. Khi hết lượt chơi mà vẫn chưa phá hết gạch thì sẽ thua cuộc.
   Nhóm gồm hai thành viên: Nguyễn Quang Huy – 17520583, Phạm Phúc Khải – 17520081. Xây dựng và thiết kế game giống thể loại game Breakout tuy nhiên được nâng cấp và được thêm nhiều tính năng. Dự án được làm qua phần mềm quản lí Source Code GitHub. Link đồ án: https://github.com/huynguyen1999kh/minigame-breakout
