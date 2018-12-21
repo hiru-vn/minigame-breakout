@@ -11,6 +11,7 @@ I. Giới thiệu
     
 II. Thiết kế
 	Game được thiết kế phân lớp rõ ràng tương ứng với từng đối tượng. Nhiều tính năng hấp dẫn cùng với âm thanh sinh động.
+
 2.1/ Giới thiệu
 	Game được mã hóa với mật khẩu là số chẵn và tự động nhớ mật khẩu sau lần đầu đăng nhập. Sau khi đăng nhập là phần màn hình chính của trò chơi với 4 lựa chọn: 
 	
@@ -26,14 +27,19 @@ II. Thiết kế
 2.2/ Hướng dẫn chơi game
 -	Chế độ Single Player: 
 Dùng phím A, D hoặc →  ←  hoặc chuột để di chuyển ván trượt sang trái hoặc sang phải, nhấn Enter hoặc chuột trái để banh di chuyển (nảy) nhanh hơn. Phía trên có Score thể hiện điểm số, và trái tim thể hiện số lượt chơi (mạng) tương ứng của người chơi. Góc trái trên màn hình là nút Pause để tạm dừng trò chơi hoặc trở về màn hình chính. Trò chơi sẽ tự động dừng lại khi lost focus để bạn không bị quấy rầy giữa chừng.
- 
+
+<a href="https://imgflip.com/gif/2pi4sm"><img src="https://i.imgflip.com/2pi4sm.gif" title="made at imgflip.com"/></a> 
+<a href="https://imgflip.com/gif/2pi4x2"><img src="https://i.imgflip.com/2pi4x2.gif" title="made at imgflip.com"/></a>
+
 Bạn sẽ thua cuộc khi để số mạng giảm xuống 0, hoặc khi hết thời gian. Chú ý nhặt các vật phẩm rơi ra để dễ dàng chiến thắng cho trò chơi. Các vật phẩm như: Tăng kích thước ván, súng bắn gạch, tăng tốc độ, thêm mạng. Tuy nhiên vẫn có một vài vật phẩm có hại làm thu nhỏ, làm chậm ván của bạn nên hãy cẩn thận.
 -	Chế độ Two Player: 
 Hai người chơi, một dùng chuột, một dùng bàn phím A, D hoặc →  ←  để di chuyển, chú ý các vật thể cản bóng có thể làm bạn mất lược chơi một cách bất ngờ. Người chơi nào hết lượt chơi trước sẽ thua cuộc và người còn lại là người chiến thắng.
- 
+<a href="https://imgflip.com/gif/2pi508"><img src="https://i.imgflip.com/2pi508.gif" title="made at imgflip.com"/></a>
 -	Chế độ Vs Computer: 
      
 Bao gồm 3 chế độ chơi từ dễ đến khó. Dùng chuột hoặc bàn phím với hai phím A, D để di chuyển. Vật cản y như trong chế độ hai người chơi tuy nhiên ở đây bạn phải chiến đấu với mấy với độ thông minh theo từng cấp độ. Hình thức chơi cũng vậy, ai hết lượt chơi trước sẽ thua.
+
+<a href="https://imgflip.com/gif/2pi58f"><img src="https://i.imgflip.com/2pi58f.gif" title="made at imgflip.com"/></a>
 
 III/ Kết luận và hướng phát triển
 	Game còn khá đơn giản, với đồ họa còn khá đơn sơ. Tính chính xác trong việc xử lí va chạm đôi khi còn phát sinh lỗi. 
